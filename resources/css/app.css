@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'neogroteskpro';
+    src: url('../fonts/neogroteskpro-black.otf') format('opentype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'neogroteskpro';
+    src: url('../fonts/neogroteskpro-bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'neogroteskpro';
+    src: url('../fonts/neogroteskpro-regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'neogroteskpro';
+    src: url('../fonts/neogroteskpro-light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'neogroteskpro';
+    src: url('../fonts/neogroteskpro-ultralight.otf') format('opentype');
+    font-weight: 100;
+}
+
+
+.container{
+    @apply px-4 lg:px-6
+}

@@ -1,0 +1,31 @@
+created:
+    - database/factories/EventFactory.php
+    - database/factories/NewsFactory.php
+    - database/factories/ProductFactory.php
+    - database/factories/ProductFlavorFactory.php
+    - database/factories/BrandFactory.php
+    - database/factories/IntegrityFactory.php
+    - database/factories/PositionFactory.php
+    - database/migrations/2023_12_16_215112_create_events_table.php
+    - database/migrations/2023_12_16_215113_create_news_table.php
+    - database/migrations/2023_12_16_215114_create_products_table.php
+    - database/migrations/2023_12_16_215115_create_product_flavors_table.php
+    - database/migrations/2023_12_16_215116_create_brands_table.php
+    - database/migrations/2023_12_16_215117_create_integrities_table.php
+    - database/migrations/2023_12_16_215118_create_positions_table.php
+    - app/Models/Event.php
+    - app/Models/News.php
+    - app/Models/Product.php
+    - app/Models/ProductFlavor.php
+    - app/Models/Brand.php
+    - app/Models/Integrity.php
+    - app/Models/Position.php
+models:
+    Post: { title: 'string:400', content: longtext, image: image, published_at: 'nullable timestamp' }
+    Event: { title: 'string:200', content: longtext, image: image }
+    News: { title: 'string:200', content: longtext, image: image }
+    Product: { title: 'string:200', image: image, brand: 'enum:planet,bubble-up,american-cola,reaktor', heroImage: image, productHistoryImage: image, relationships: { belongsTo: Brand } }
+    Brand: { title: 'string:200', image: image, greyscaleImage: image, description: longtext }
+    Integrity: { title: 'string:200', image: image }
+    ProductFlavor: { title: 'string:200', image: image, relationships: { belongsTo: Product } }
+    Position: { title: 'string:200', image: image }

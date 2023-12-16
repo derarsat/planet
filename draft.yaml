@@ -1,0 +1,33 @@
+models:
+  Event:
+    title: string:200
+    content: longtext
+    image: image
+  News:
+    title: string:200
+    content: longtext
+    image: image
+  Product:
+    title: string:200
+    image: image
+    brand:  enum:planet,bubble-up,american-cola,reaktor
+    heroImage: image
+    productHistoryImage: image
+    relationships:
+      belongsTo: Brand
+  ProductFlavor:
+    title: string:200
+    image: image
+    relationships:
+      belongsTo: Product
+  Brand:
+    title: string:200
+    image: image
+    greyscaleImage: image
+    description: longtext
+  Integrity:
+    title: string:200
+    image: image
+  Position:
+    title: string:200
+    image: image
