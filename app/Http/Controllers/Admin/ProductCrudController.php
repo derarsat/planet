@@ -37,6 +37,22 @@ class ProductCrudController extends CrudController
             'upload' => true,
             'prefix' => 'uploads/products',
         ]);
+        $this->crud->addField([
+            'name' => 'historyImage',
+            'label' => 'History Image',
+            'type' => 'image',
+            'disk' => 'public',
+            'upload' => true,
+            'prefix' => 'uploads/products',
+        ]);
+        $this->crud->addField([
+            'name' => 'heroImage',
+            'label' => 'Hero Image',
+            'type' => 'image',
+            'disk' => 'public',
+            'upload' => true,
+            'prefix' => 'uploads/products',
+        ]);
     }
 
     /**
@@ -48,16 +64,18 @@ class ProductCrudController extends CrudController
     protected function setupListOperation()
     {
         $this->crud->addColumns($this->getFieldsData(TRUE));
+        CRUD::column('brand',);
         CRUD::column('title');
-        CRUD::column('brand');
+        CRUD::column('story');
+        CRUD::column('history');
         $this->crud->addColumn([
             'name' => 'image',
             'label' => "Image",
             'type' => 'image',
         ]);
         $this->crud->addColumn([
-            'name' => 'productHistoryImage',
-            'label' => "Product History Image",
+            'name' => 'historyImage',
+            'label' => "History Image",
             'type' => 'image',
         ]);
         $this->crud->addColumn([
@@ -70,26 +88,22 @@ class ProductCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(ProductRequest::class);
-
         CRUD::field('title');
-        CRUD::field('brand');
+        CRUD::field('history');
+        CRUD::field('story');
+        CRUD::field('brand_id');
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
-                'disk' => 'public', // the disk where file will be stored
-                'path' => 'uploads', // the path inside the disk where file will be stored
+
             ]);
         CRUD::field('heroImage')
             ->type('upload')
             ->withFiles([
-                'disk' => 'public', // the disk where file will be stored
-                'path' => 'uploads', // the path inside the disk where file will be stored
             ]);
-        CRUD::field('productHistoryImage')
+        CRUD::field('historyImage')
             ->type('upload')
             ->withFiles([
-                'disk' => 'public', // the disk where file will be stored
-                'path' => 'uploads', // the path inside the disk where file will be stored
             ]);
     }
 
@@ -107,11 +121,16 @@ class ProductCrudController extends CrudController
                 'label' => 'Title',
                 'type' => 'text',
             ],
-            [
-                'name' => 'brand',
-                'label' => 'Brand',
-                'type' => 'text',
-            ],
+//            [
+//                'name' => 'history',
+//                'label' => 'History',
+//                'type' => 'textarea',
+//            ],
+//            [
+//                'name' => 'story',
+//                'label' => 'Story',
+//                'type' => 'textarea',
+//            ],
             [
                 'label' => "Image",
                 'name' => "image",
@@ -123,14 +142,14 @@ class ProductCrudController extends CrudController
                 'label' => "Hero Image",
                 'name' => "heroImage",
                 'type' => ($show ? 'view' : 'upload'),
-                'view' => 'partials/image',
+                'view' => 'partials/heroImage',
                 'upload' => true,
             ],
             [
-                'label' => "Product History Image",
-                'name' => "productHistoryImage",
+                'label' => "History Image",
+                'name' => "historyImage",
                 'type' => ($show ? 'view' : 'upload'),
-                'view' => 'partials/image',
+                'view' => 'partials/historyImage',
                 'upload' => true,
             ]
         ];

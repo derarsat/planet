@@ -21,10 +21,13 @@ class Product extends Model
      */
     protected $fillable = [
         'title',
+        'story',
+        'history',
+        'brand_id',
         'image',
         'brand',
         'heroImage',
-        'productHistoryImage',
+        'historyImage',
     ];
 
     /**
@@ -34,11 +37,18 @@ class Product extends Model
      */
     protected $casts = [
         'id' => 'integer',
+
     ];
 
     public function brand()
     {
-        return $this->belongsTo(Brand::class);
+        return $this->belongsTo(Brand::class,"brand_id","id");
+
+    }
+
+    public function productFlavors()
+    {
+        return $this->hasMany(ProductFlavor::class);
     }
 
     public function setImageAttribute($value)
@@ -63,9 +73,9 @@ class Product extends Model
         $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;
     }
 
-    public function setproductHistoryImageImageAttribute($value)
+    public function sethistoryImageAttribute($value)
     {
-        $attribute_name = "productHistoryImage";
+        $attribute_name = "historyImage";
         $destination_path = "public/products";
         $image = Image::make($value)->encode('jpg', 90);
         $filename = md5($value . time()) . '.jpg';
@@ -77,14 +87,15 @@ class Product extends Model
 
     public function getImageAttribute($value)
     {
-    return str_replace('storage/products', 'products', $value);
+        return str_replace('storage/products', 'products', $value);
     }
-    public function getHeroImageAttribute($value)
+
+    public function getheroImageAttribute($value)
     {
         return str_replace('storage/products', 'products', $value);
     }
 
-    public function getProductHistoryImageAttribute($value)
+    public function gethistoryImageAttribute($value)
     {
         return str_replace('storage/products', 'products', $value);
     }

@@ -34,6 +34,11 @@ class Brand extends Model
         'id' => 'integer',
     ];
 
+
+    public function products()
+    {
+        return $this->hasMany(\App\Models\Product::class);
+    }
     public function setImageAttribute($value)
     {
         $attribute_name = "image";

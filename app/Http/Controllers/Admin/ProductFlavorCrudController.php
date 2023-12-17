@@ -108,11 +108,6 @@ class ProductFlavorCrudController extends CrudController
                 'type' => 'text',
             ],
             [
-                'name' => 'product',
-                'label' => 'Product',
-                'type' => 'text',
-            ],
-            [
                 'label' => "Image",
                 'name' => "image",
                 'type' => ($show ? 'view' : 'upload'),

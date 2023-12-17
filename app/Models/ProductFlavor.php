@@ -21,7 +21,7 @@ class ProductFlavor extends Model
     protected $fillable = [
         'title',
         'image',
-        'product_id'
+        'product_id',
     ];
 
     /**
@@ -35,7 +35,7 @@ class ProductFlavor extends Model
 
     public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class,"product_id","id");
     }
 
 

@@ -33,7 +33,7 @@
                     <div class="p-4">
                         <img src="{{@App::make('url')->to('/') . '/storage/' . $position->image  }}"
                              class="w-full aspect-square rounded-full"/>
-                        <h1 class="text-white text-lg text-center">
+                        <h1 class="text-white mt-3   text-lg text-center">
                             {{$position->title}}
                         </h1>
                     </div>
@@ -69,7 +69,8 @@
         </h1>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-7xl px-4 lg:px-0 py-6 lg:py-0">
-            <img src="{{Vite::asset('resources/images/bubble-1.webp')}}" alt="Planet Bottling Marketing" class="w-full hidden lg:block">
+            <img src="{{Vite::asset('resources/images/bubble-1.webp')}}" alt="Planet Bottling Marketing"
+                 class="w-full hidden lg:block">
             <div>
                 <p class="font-light">
                     Be leaders of innovation in Nigeria the giant of Africa, as we build and maintain consumer standards
@@ -84,13 +85,35 @@
     <script>
         $('.responsive').slick({
             dots: true,
-            centerMode: true,
+            // centerMode: true,
             arrows: true,
             speed: 300,
             slidesToShow: 5,
             slidesToScroll: 5,
+            responsive: [
 
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 5,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }
+            ]
         })
-        ;
     </script>
 @endsection

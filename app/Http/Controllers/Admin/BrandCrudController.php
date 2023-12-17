@@ -19,12 +19,7 @@ class BrandCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    /**
-     * Configure the CrudPanel object. Apply settings to all operations.
-     *
-     * @return void
-     */
-    public function setup()
+    public function setup(): void
     {
         CRUD::setModel(\App\Models\Brand::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/brand');
@@ -49,13 +44,7 @@ class BrandCrudController extends CrudController
         ]);
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     *
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
-    protected function setupListOperation()
+    protected function setupListOperation(): void
     {
         $this->crud->addColumns($this->getFieldsData(TRUE));
 
@@ -71,61 +60,31 @@ class BrandCrudController extends CrudController
             'label' => "Greyscale Image",
             'type' => 'image',
         ]);
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
-         */
     }
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
-    protected function setupCreateOperation()
+    protected function setupCreateOperation(): void
     {
         CRUD::setValidation(BrandRequest::class);
-
         CRUD::field('title');
-
         CRUD::field('description');
-
-
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
-                'disk' => 'public', // the disk where file will be stored
-                'path' => 'uploads', // the path inside the disk where file will be stored
             ]);
-
 
         CRUD::field('greyscaleImage')
             ->type('upload')
             ->withFiles([
-                'disk' => 'public', // the disk where file will be stored
-                'path' => 'uploads', // the path inside the disk where file will be stored
             ]);
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
-         */
     }
 
-    /**
-     * Define what happens when the Update operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
-    protected function setupUpdateOperation()
+    protected function setupUpdateOperation(): void
     {
         $this->setupCreateOperation();
     }
 
-    private function getFieldsData($show = FALSE){
+    private function getFieldsData($show = FALSE): array
+    {
         return [
             [
                 'name' => 'title',

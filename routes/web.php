@@ -21,7 +21,7 @@ Route::get('/who-we-are', function () {
     return view('who-we-are');
 });
 Route::get('/brands', function () {
-    $brands = \App\Models\Brand::all();
+    $brands = \App\Models\Brand::with('products')->get();
     return view('brands', compact('brands'));
 });
 
@@ -37,4 +37,9 @@ Route::get('/media', function () {
 Route::get('/get-in-touch', function () {
     $positions = \App\Models\Position::all();
     return view('get-in-touch', compact('positions'));
+});
+
+Route::get('/product/{id}', function () {
+    $product = \App\Models\Product::with('productFlavors')->find(request()->id);
+    return view('product', compact('product'));
 });

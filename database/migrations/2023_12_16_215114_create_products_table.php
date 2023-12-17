@@ -15,11 +15,13 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->integer('brand_id')->unsigned();
             $table->string('title', 200);
+            $table->longText('history');
+            $table->longText('story');
             $table->string('image');
-            $table->enum('brand', ["planet","bubble-up","american-cola","reaktor"]);
             $table->string('heroImage');
-            $table->string('productHistoryImage');
+            $table->string('historyImage');
             $table->timestamps();
         });
     }

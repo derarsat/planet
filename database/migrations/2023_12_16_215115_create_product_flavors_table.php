@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('product_flavors', function (Blueprint $table) {
             $table->id();
+            $table->integer('product_id')->unsigned();
             $table->string('title', 200);
             $table->string('image');
             $table->timestamps();

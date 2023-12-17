@@ -14,14 +14,12 @@
                         <p class="font-light">
                             {{$brand->description}}
                         </p>
-                        <p>
-
-                        </p>
                     </div>
-                    <button class="bg-primary text-white px-4 py-2 rounded-full mt-6 lg:mt-0">Learn More</button>
+                    <a href="/product/{{$brand->products[0]->id}}"
+                       class="bg-primary text-white px-4 py-2 rounded-full mt-6 lg:mt-0">Learn More</a>
                 </div>
                 <img class="order-1 lg:order-2 w-full col-span-3 lg:col-span-1"
-                     src="{{@App::make('url')->to('/') . '/storage/' . $brand->image}}" alt="Reaktor">
+                     src="{{@App::make('url')->to('/') . '/storage/' . $brand->image}}" alt="{{$brand->title}}">
             </div>
 
         @endforeach
