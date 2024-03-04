@@ -1,4 +1,13 @@
 <?php $__env->startSection('content'); ?>
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <script src="./jquery.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <style>
+        .slick-dots li button:before, .slick-dots li.slick-active button:before {
+            color: #fff;
+        }
+    </style>
     <div class="grid grid-cols-1">
         
         <div class=" text-center flex flex-col justify-center items-center pt-16">
@@ -66,6 +75,30 @@
                 </p>
             </div>
         </div>
+        <div class="bg-dark py-12 lg:py-24 mb-12">
+            <div class="mb-12 max-w-7xl mx-auto px-4 lg:px-0">
+                <h1 class="text-white font-semibold text-5xl text-center">Integrity <br>in Action</h1>
+                <h2 class="text-white text-center mt-4 mb-12">OUR VALUES</h2>
+
+                <div class="responsive max-w-7xl mx-auto px-4 lg:px-0">
+                    <?php $__currentLoopData = $integrates; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $integrate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="p-4">
+                            <div class="p-4">
+                                <img src="<?php echo e(@App::make('url')->to('/') . '/storage/' . $integrate->image); ?>"
+                                     class="w-full aspect-square rounded-full"/>
+                                <h1 class="text-white mt-3   text-lg text-center">
+                                    <?php echo e($integrate->title); ?>
+
+                                </h1>
+                            </div>
+                        </div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </div>
+
+            </div>
+
+
+        </div>
         
         <?php if (isset($component)) { $__componentOriginal494ea3db45321890e3d0ded22a532811b318bca8 = $component; } ?>
 <?php $component = App\View\Components\Brands::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
@@ -82,6 +115,40 @@
 <?php unset($__componentOriginal494ea3db45321890e3d0ded22a532811b318bca8); ?>
 <?php endif; ?>
     </div>
+    <script>
+        $('.responsive').slick({
+            dots: true,
+            // centerMode: true,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            responsive: [
+
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 5,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }
+            ]
+        })
+    </script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/derarsattouf/Documents/code/personal/planet/resources/views/who-we-are.blade.php ENDPATH**/ ?>

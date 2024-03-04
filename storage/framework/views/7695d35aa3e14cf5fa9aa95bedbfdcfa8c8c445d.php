@@ -19,7 +19,7 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 container py-6 lg:py-0">
         <?php $__currentLoopData = $brands; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $brand): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-            <img src="<?php echo e(@App::make('url')->to('/') . '/storage/' . $brand->greyscaleImage); ?>" class="w-full"/>
+            <img src="<?php echo e(@App::make('url')->to('/') . '/storage/' . $brand->greyscaleImage); ?>" class="w-full aspect-square"/>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 </div>

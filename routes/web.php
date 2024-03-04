@@ -18,7 +18,8 @@ Route::get('/', function () {
     return view('index',compact('brands'));
 });
 Route::get('/who-we-are', function () {
-    return view('who-we-are');
+    $integrates = \App\Models\Integrity::all();
+    return view('who-we-are', compact('integrates'));
 });
 Route::get('/brands', function () {
     $brands = \App\Models\Brand::with('products')->get();

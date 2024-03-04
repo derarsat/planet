@@ -19,7 +19,7 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 container py-6 lg:py-0">
         @foreach($brands as $brand)
 
-            <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->greyscaleImage  }}" class="w-full"/>
+            <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->greyscaleImage  }}" class="w-full aspect-square"/>
         @endforeach
     </div>
 </div>
