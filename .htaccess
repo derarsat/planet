@@ -1,12 +1,12 @@
-RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} -d [OR]
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule ^ ^$1 [N]
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
 
-RewriteCond %{REQUEST_URI} (\.\w+$) [NC]
-RewriteRule ^(.*)$ public/$1
+    RewriteEngine On
+    RewriteBase /test/
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ server.php
+    RewriteRule ^$ public/index.php [L]
+
+    RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+
+</IfModule>
