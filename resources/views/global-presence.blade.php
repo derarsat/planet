@@ -17,7 +17,7 @@
             from ‘the Monarch Beverages company, Atlanta, GA, USA’.
 
         </p>
-        <img src="images/brands-table.webp" alt="">
+        <img src="/images/brands-table.webp" alt="">
 
     </div>
 @endsection

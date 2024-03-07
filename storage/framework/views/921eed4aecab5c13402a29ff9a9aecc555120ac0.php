@@ -1,7 +1,7 @@
 <nav class="border-b border-gray-300">
     <div class="container flex items-center py-4 justify-between">
         <a href="/">
-            <img src="./planet-bottling.png" alt="Planet Bottling" class="w-40">
+            <img src="/planet-bottling.png" alt="Planet Bottling" class="w-40">
         </a>
         <div class="text-[#384B53] hidden lg:flex gap-4 items-center  font-light">
             <a href="/who-we-are">Who We Are</a>

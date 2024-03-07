@@ -1,7 +1,7 @@
 <div class="bg-dark">
     <div class="container">
         <div class="py-12 lg:py-24">
-            <img src="images/logo-white.webp" alt="Planet Bottling"
+            <img src="/images/logo-white.webp" alt="Planet Bottling"
                  class="w-44">
 
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 text-white mt-12 items-start justify-start">

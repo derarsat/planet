@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
     <script src="/jquery.js"></script>
@@ -11,7 +9,7 @@
         }
     </style>
     <div class="relative">
-        <img src="{{@App::make('url')->to('/') . '/storage/' . $product->heroImage}}" alt="{{$product->title}}"> />
+        <img src="<?php echo e(@App::make('url')->to('/') . '/storage/' . $product->heroImage); ?>" alt="<?php echo e($product->title); ?>"> />
         <div
             class="absolute z-10 flex items-center justify-center inset-0 bg-gradient-to-t from-primary to-transparent ">
         </div>
@@ -23,15 +21,16 @@
             </h1>
 
             <p class="text-white  lg:px-0 mx-auto text-center mt-8 mb-24 font-light">
-                {{$product->story}}
+                <?php echo e($product->story); ?>
+
             </p>
-            {{--        machine image--}}
+            
             <img src="/images/machine.webp" class="w-full" alt="Planet Bottling Marketing"
             >
         </div>
 
 
-        {{--        bubble-1 image--}}
+        
         <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
              class="w-96 hidden lg:block absolute top-0 right-0">
     </div>
@@ -42,14 +41,15 @@
 
         <div class="max-w-4xl px-4 mx-auto grid grid-cols-2 gap-12 items-center">
             <div class="relative">
-                {{--                bubble image--}}
+                
                 <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
                      class="w-44 absolute -top-20 -left-20">
-                <img class="w-full " src="{{@App::make('url')->to('/') . '/storage/' . $product->historyImage}}"
-                     alt="{{$product->title}}"> />
+                <img class="w-full " src="<?php echo e(@App::make('url')->to('/') . '/storage/' . $product->historyImage); ?>"
+                     alt="<?php echo e($product->title); ?>"> />
             </div>
             <p>
-                {{$product->history}}
+                <?php echo e($product->history); ?>
+
             </p>
         </div>
         <div class="max-w-7xl px-4 lg:px-0 mx-auto relative">
@@ -59,19 +59,19 @@
                 THE FLAVORS
             </h1>
             <p class="text-center">
-                {{$product->title}} celebrates diversity through a world of tastes while bringing Nigerians closer
+                <?php echo e($product->title); ?> celebrates diversity through a world of tastes while bringing Nigerians closer
                 together.
             </p>
 
 
             <div class="responsive max-w-7xl mx-auto px-4 lg:px-0 mt-12">
-                @foreach($product->productFlavors as $flavor)
+                <?php $__currentLoopData = $product->productFlavors; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $flavor): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="p-4">
-                        <img alt="{{$flavor->title}}"
-                             src="{{@App::make('url')->to('/') . '/storage/' . $flavor->image  }}"
+                        <img alt="<?php echo e($flavor->title); ?>"
+                             src="<?php echo e(@App::make('url')->to('/') . '/storage/' . $flavor->image); ?>"
                              class="w-full aspect-square rounded-full"/>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>
@@ -110,4 +110,6 @@
             ]
         })
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/derarsattouf/Documents/code/personal/planet/resources/views/product.blade.php ENDPATH**/ ?>

@@ -12,7 +12,7 @@
                 <button class="bg-white text-primary px-6 py-2 rounded-full">Learn More</button>
 
             </div>
-            <img src="images/hero.webp" alt="Planet Bottling Hero">
+            <img src="/images/hero.webp" alt="Planet Bottling Hero">
         </div>
         {{----}}
         <div class="text-center grid grid-cols-1 gap-12">
@@ -33,14 +33,14 @@
         </div>
         {{----}}
         <div class="container relative">
-            <img src="images/machine.webp" alt="Planet Bottling Machines">
-            <img src="images/bubble-1.webp" alt="Planet Bottling Locations"
+            <img src="/images/machine.webp" alt="Planet Bottling Machines">
+            <img src="/images/bubble-1.webp" alt="Planet Bottling Locations"
                  class="w-96 absolute -top-[12rem] -left-[12rem] hidden lg:block">
         </div>
 
         {{----}}
         <div class="bg-dark container grid grid-cols-1 lg:grid-cols-2 gap-24 py-6 lg:py-0 ">
-            <img src="images/man.webp" alt="Planet Bottling Factory">
+            <img src="/images/man.webp" alt="Planet Bottling Factory">
             <div
                 class="text-center lg:text-right text-white flex flex-col items-center lg:items-end justify-center gap-12 ">
                 <h2 class="font-bold text-4xl lg:text-7xl">OUR <br class="hidden lg:block"> VALUES</h2>
@@ -60,14 +60,14 @@
                 Planet bottling manufactures and markets a range of beverages made entirely in Nigeria under the license
                 from ‘the Monarch Beverages company, Atlanta, GA, USA’. Our brands are already present in over 60
                 countries globally and 40 African countries.
-                <img src="images/bubble-1.webp" alt="Planet Bottling Locations"
+                <img src="/images/bubble-1.webp" alt="Planet Bottling Locations"
                      class="w-64 absolute -top-[8rem] -right-[8rem] hidden lg:block">
             </p>
             <div class="flex justify-center">
                 <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
 
             </div>
-            <img src="images/map.webp" alt="Planet Bottling Locations"
+            <img src="/images/map.webp" alt="Planet Bottling Locations"
                  class="w-[32rem] max-w-full mx-auto">
         </div>
         {{----}}
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <img class="absolute -top-1/3 right-0 w-[32rem] hidden lg:block"
-                     src="images/chat-bubbles.webp"
+                     src="/images/chat-bubbles.webp"
                      alt="Planet Bottling Factory">
 
             </div>

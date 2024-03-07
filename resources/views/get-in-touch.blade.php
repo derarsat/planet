@@ -10,7 +10,7 @@
         }
     </style>
     <div class="relative h-[85vh] bg-center bg-cover"
-         style="background-image: url('images/factory.webp')">
+         style="background-image: url('/images/factory.webp')">
         <div
             class="absolute z-10 flex items-center justify-center inset-0 bg-gradient-to-t from-primary from-0% to-40%  to-transparent ">
             <h1 class="text-white font-semibold text-5xl text-center">
@@ -60,7 +60,7 @@
             strategies.
         </p>
 
-        <img src="images/marketing.webp" alt="Planet Bottling Marketing" class="w-full">
+        <img src="/images/marketing.webp" alt="Planet Bottling Marketing" class="w-full">
     </div>
 
     <div>
@@ -69,7 +69,7 @@
         </h1>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-7xl px-4 lg:px-0 py-6 lg:py-0">
-            <img src="images/bubble-1.webp" alt="Planet Bottling Marketing"
+            <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
                  class="w-full hidden lg:block">
             <div>
                 <p class="font-light">
