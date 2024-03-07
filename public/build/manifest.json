@@ -1,0 +1,32 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-9cdd2864.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/fonts/neogroteskpro-black.otf": {
+    "file": "assets/neogroteskpro-black-84241f5e.otf",
+    "src": "resources/fonts/neogroteskpro-black.otf"
+  },
+  "resources/fonts/neogroteskpro-bold.otf": {
+    "file": "assets/neogroteskpro-bold-c84a3703.otf",
+    "src": "resources/fonts/neogroteskpro-bold.otf"
+  },
+  "resources/fonts/neogroteskpro-light.otf": {
+    "file": "assets/neogroteskpro-light-0b909946.otf",
+    "src": "resources/fonts/neogroteskpro-light.otf"
+  },
+  "resources/fonts/neogroteskpro-regular.otf": {
+    "file": "assets/neogroteskpro-regular-dd78b4da.otf",
+    "src": "resources/fonts/neogroteskpro-regular.otf"
+  },
+  "resources/fonts/neogroteskpro-ultralight.otf": {
+    "file": "assets/neogroteskpro-ultralight-fb42b4a5.otf",
+    "src": "resources/fonts/neogroteskpro-ultralight.otf"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
