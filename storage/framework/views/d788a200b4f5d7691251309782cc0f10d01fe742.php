@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     <script src="./jquery.js"></script>
@@ -11,7 +9,7 @@
         }
     </style>
     <div class="grid grid-cols-1">
-        {{----}}
+        
         <div class=" text-center flex flex-col justify-center items-center pt-16">
             <h2 class="text-primary font-bold text-4xl lg:text-7xl relative z-10 ">
 
@@ -31,7 +29,7 @@
                      class="w-44 absolute top-80 left-12 hidden lg:block">
             </div>
         </div>
-        {{----}}
+        
         <div class="from-primary to-white bg-gradient-to-b py-12 lg:py-24  ">
 
             <div class="container  text-white text-center relative">
@@ -55,7 +53,7 @@
                      class="mt-12 max-w-full w-[64rem] mx-auto">
             </div>
         </div>
-        {{----}}
+        
         <div class="text-primary container flex-col flex items-center justify-center gap-12 text-center">
             <h2 class=" font-bold text-4xl lg:text-7xl relative z-10 ">
                 ENVISIONING <br> BRILLIANCE
@@ -83,25 +81,39 @@
                 <h2 class="text-white text-center mt-4 mb-12">OUR VALUES</h2>
 
                 <div class="responsive max-w-7xl mx-auto px-4 lg:px-0">
-                    @foreach($integrates as $integrate)
+                    <?php $__currentLoopData = $integrates; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $integrate): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="p-4">
                             <div class="p-4">
-                                <img src="{{@App::make('url')->to('/') . '/storage/' . $integrate->image  }}"
+                                <img src="<?php echo e(@App::make('url')->to('/') . '/storage/' . $integrate->image); ?>"
                                      class="w-full aspect-square rounded-full"/>
                                 <h1 class="text-white mt-3   text-lg text-center">
-                                    {{$integrate->title}}
+                                    <?php echo e($integrate->title); ?>
+
                                 </h1>
                             </div>
                         </div>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
 
             </div>
 
 
         </div>
-        {{----}}
-        <x-brands></x-brands>
+        
+        <?php if (isset($component)) { $__componentOriginal494ea3db45321890e3d0ded22a532811b318bca8 = $component; } ?>
+<?php $component = App\View\Components\Brands::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('brands'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\Brands::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?> <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal494ea3db45321890e3d0ded22a532811b318bca8)): ?>
+<?php $component = $__componentOriginal494ea3db45321890e3d0ded22a532811b318bca8; ?>
+<?php unset($__componentOriginal494ea3db45321890e3d0ded22a532811b318bca8); ?>
+<?php endif; ?>
     </div>
     <script>
         $('.responsive').slick({
@@ -137,4 +149,6 @@
             ]
         })
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/derarsattouf/Documents/code/personal/planet/resources/views/who-we-are.blade.php ENDPATH**/ ?>

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <img src="{{ Vite::asset('resources/images/brands-banner.webp') }}" alt="Planet Bottling Brands"/>
+    <img src="images/brands-banner.webp" alt="Planet Bottling Brands"/>
 
     <div class="container py-12 grid grid-cols-1 gap-12 text-dark">
         @foreach($brands as $brand)

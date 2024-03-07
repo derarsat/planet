@@ -9,7 +9,7 @@
         satisfaction. <br> <br> With a strong commitment to quality and affordability, our beverages are the
         perfect
         choice for discerning consumers seeking exceptional taste at a reasonable price.
-        <img src="<?php echo e(Vite::asset('resources/images/bubble-1.webp')); ?>" alt="Planet Bottling Locations"
+        <img src="images/logo-white.webp" alt="Planet Bottling Locations"
              class="w-64 absolute -top-[8rem] -right-[8rem] hidden lg:block">
     </p>
     <div class="flex justify-center">

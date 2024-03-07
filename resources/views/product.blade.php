@@ -26,13 +26,13 @@
                 {{$product->story}}
             </p>
             {{--        machine image--}}
-            <img src="{{Vite::asset('resources/images/machine.webp')}}" class="w-full" alt="Planet Bottling Marketing"
+            <img src="images/machine.webp" class="w-full" alt="Planet Bottling Marketing"
             >
         </div>
 
 
         {{--        bubble-1 image--}}
-        <img src="{{Vite::asset('resources/images/bubble-1.webp')}}" alt="Planet Bottling Marketing"
+        <img src="images/bubble-1.webp" alt="Planet Bottling Marketing"
              class="w-96 hidden lg:block absolute top-0 right-0">
     </div>
     <div class="py-12 lg:py-24">
@@ -43,7 +43,7 @@
         <div class="max-w-4xl px-4 mx-auto grid grid-cols-2 gap-12 items-center">
             <div class="relative">
                 {{--                bubble image--}}
-                <img src="{{Vite::asset('resources/images/bubble-1.webp')}}" alt="Planet Bottling Marketing"
+                <img src="images/bubble-1.webp" alt="Planet Bottling Marketing"
                      class="w-44 absolute -top-20 -left-20">
                 <img class="w-full " src="{{@App::make('url')->to('/') . '/storage/' . $product->historyImage}}"
                      alt="{{$product->title}}"> />
@@ -53,7 +53,7 @@
             </p>
         </div>
         <div class="max-w-7xl px-4 lg:px-0 mx-auto relative">
-            <img src="{{Vite::asset('resources/images/bubble-1.webp')}}" alt="Planet Bottling Marketing"
+            <img src="images/bubble-1.webp" alt="Planet Bottling Marketing"
                  class="w-96 absolute -top-20 -right-20">
             <h1 class="text-primary font-semibold text-5xl text-center my-12 ">
                 THE FLAVORS
