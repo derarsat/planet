@@ -11,7 +11,7 @@
         }
     </style>
     <div class="relative">
-        <img src="{{@App::make('url')->to('/') . '/storage/' . $product->heroImage}}" alt="{{$product->title}}"> />
+        <img src="{{@App::make('url')->to('/') . '/storage/' . $product->heroImage}}" alt="{{$product->title}}">
         <div
             class="absolute z-10 flex items-center justify-center inset-0 bg-gradient-to-t from-primary to-transparent ">
         </div>
@@ -46,7 +46,7 @@
                 <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
                      class="w-44 absolute -top-20 -left-20">
                 <img class="w-full " src="{{@App::make('url')->to('/') . '/storage/' . $product->historyImage}}"
-                     alt="{{$product->title}}"> />
+                     alt="{{$product->title}}">
             </div>
             <p>
                 {{$product->history}}
