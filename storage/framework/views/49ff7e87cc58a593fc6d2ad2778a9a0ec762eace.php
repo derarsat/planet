@@ -1,0 +1,1 @@
+</<?php echo e($field['wrapper']['element'] ?? 'div'); ?>><?php /**PATH /home4/romanfoo/public_html/website_0c6056de/resources/views/vendor/backpack/crud/fields/inc/wrapper_end.blade.php ENDPATH**/ ?>
