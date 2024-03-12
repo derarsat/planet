@@ -18,7 +18,7 @@
         <div class="slider">
             @foreach($events as $event)
                 <h1>{{$event->title}}</h1>
-                <img src="{{@App::make('url')->to('/') . '/storage' . $event->image}}" alt="">
+                <img src="{{@App::make('url')->to('/') . '/' . $event->image}}" alt="">
             @endforeach
         </div>
     </div>
