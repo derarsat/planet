@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <script src="./jquery.js"></script>
     <script src="./slick/slick.min.js"></script>
     <link rel="stylesheet" href="./slick/slick.css">
@@ -16,10 +14,10 @@
 
     <div class="container">
         <div class="slider">
-            @foreach($events as $event)
-                <h1>{{$event->title}}</h1>
-                <img src="{{@App::make('url')->to('/storage') . '/' . $event->image}}" alt="">
-            @endforeach
+            <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <h1><?php echo e($event->title); ?></h1>
+                <img src="<?php echo e(@App::make('url')->to('/') . '/' . $event->image); ?>" alt="">
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
 
@@ -35,4 +33,6 @@
         });
 
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/derarsattouf/Documents/code/personal/planet/resources/views/media.blade.php ENDPATH**/ ?>
