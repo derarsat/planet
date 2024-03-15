@@ -18,8 +18,10 @@
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 container py-6 lg:py-0">
         @foreach($brands as $brand)
-
-            <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->greyscaleImage  }}" class="w-full aspect-square"/>
+            <div class="aspect-square group relative rounded-3xl overflow-hidden">
+                <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->greyscaleImage  }}" class="absolute inset-0 h-full w-full opacity-100 aspect-square transition duration-1000 group-hover:opacity-0"/>
+                <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->image  }}" class="absolute inset-0 opacity-0 w-full h-full transition duration-1000 group-hover:opacity-100"/>
+            </div>
         @endforeach
     </div>
 </div>

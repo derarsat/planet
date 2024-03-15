@@ -94,6 +94,7 @@
 
             </div>
         </div>
+        <x-integrates></x-integrates>
         {{----}}
         <x-brands></x-brands>
     </div>

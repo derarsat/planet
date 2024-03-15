@@ -1,9 +1,5 @@
 @extends('layout')
 @section('content')
-    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
-    <script src="./jquery.js"></script>
-    <script src="./slick/slick.min.js"></script>
     <style>
         .slick-dots li button:before, .slick-dots li.slick-active button:before {
             color: #fff;

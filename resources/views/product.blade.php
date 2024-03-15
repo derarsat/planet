@@ -1,10 +1,6 @@
 @extends('layout')
 
 @section('content')
-    <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
-    <script src="/jquery.js"></script>
-    <script src="/slick/slick.min.js"></script>
     <style>
         .slick-prev:before, .slick-next:before {
             color: #008BC9;

@@ -36,3 +36,8 @@
 .container{
     @apply px-4 lg:px-6
 }
+
+
+button,a{
+    @apply hover:scale-105 transition duration-500 cursor-pointer
+}

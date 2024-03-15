@@ -37,6 +37,14 @@ class IntegrityCrudController extends CrudController
             'upload'    => true,
             'prefix'    => 'uploads/integrates',
         ]);
+        $this->crud->addField([
+            'name'      => 'grey_scale_image',
+            'label'     => 'Grey Scale Image',
+            'type'      => 'image',
+            'disk'      => 'public',
+            'upload'    => true,
+            'prefix'    => 'uploads/integrates',
+        ]);
     }
 
     /**
@@ -53,6 +61,11 @@ class IntegrityCrudController extends CrudController
         $this->crud->addColumn([
             'name' => 'image',
             'label' => "Image",
+            'type' => 'image',
+        ]);
+        $this->crud->addColumn([
+            'name' => 'grey_scale_image',
+            'label' => "Grey Scale Image",
             'type' => 'image',
         ]);
 
@@ -77,8 +90,14 @@ class IntegrityCrudController extends CrudController
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
-                'disk' => 'public', // the disk where file will be stored
-                'path' => 'uploads', // the path inside the disk where file will be stored
+                'disk' => 'public',
+                'path' => 'uploads',
+            ]);
+        CRUD::field('grey_scale_image')
+            ->type('upload')
+            ->withFiles([
+                'disk' => 'public',
+                'path' => 'uploads',
             ]);
 
         /**
@@ -108,6 +127,13 @@ class IntegrityCrudController extends CrudController
             [
                 'label' => "Image",
                 'name' => "image",
+                'type' => ($show ? 'view' : 'upload'),
+                'view' => 'partials/image',
+                'upload' => true,
+            ],
+            [
+                'label' => "Grey Scale Image",
+                'name' => "grey_scale_image",
                 'type' => ($show ? 'view' : 'upload'),
                 'view' => 'partials/image',
                 'upload' => true,
