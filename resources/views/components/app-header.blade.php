@@ -19,9 +19,9 @@
         </a>
         <div class="burger-menu block lg:hidden ">
             <div class="bar flex flex-col gap-1">
-                <span class="bar-1 transition duration-1000 w-9 h-1 rounded-full block bg-primary"> </span>
-                <span class="bar-2 transition duration-1000 w-9 h-1 rounded-full block bg-primary"> </span>
-                <span class="bar-3 transition duration-1000 w-9 h-1 rounded-full block bg-primary"> </span>
+                <span class="bar-1 transition ease-in duration-500 delay-100 w-9 h-1 rounded-full block bg-primary"> </span>
+                <span class="bar-2 transition duration-500 w-9 h-1 rounded-full block bg-primary"> </span>
+                <span class="bar-3 transition ease-out duration-500 w-9 h-1 rounded-full block bg-primary"> </span>
             </div>
         </div>
         <div class="text-[#384B53] hidden lg:flex gap-4 items-center  font-light">
@@ -73,7 +73,7 @@
 
 <script>
     $(".burger-menu ").on("click",".bar",function(){
-        $(".menu").slideToggle();
+        $(".menu").slideToggle(750);
         $(".bar").toggleClass('change');
     });
 </script>

@@ -26,7 +26,7 @@ class PositionRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'image' => 'required',
+//            'image' => 'required',
         ];
     }
 

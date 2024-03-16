@@ -27,7 +27,7 @@ class NewsRequest extends FormRequest
         return [
             'title' => 'required',
             'content' => 'required',
-            'image' => 'required',
+//            'image' => 'required',
         ];
     }
 

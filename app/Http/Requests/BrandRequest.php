@@ -25,10 +25,10 @@ class BrandRequest extends FormRequest
     public function rules()
     {
         return [
-             'title' => 'required',
-             'description' => 'required',
-            'greyscaleImage' => 'required',
-            'image' => 'required'
+            'title' => 'required',
+            'description' => 'required',
+//            'greyscaleImage' => 'required',
+//            'image' => 'required'
 
         ];
     }

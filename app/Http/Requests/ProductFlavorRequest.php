@@ -26,8 +26,8 @@ class ProductFlavorRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'image' => 'required',
-            'product_id' => 'required',
+//            'image' => 'required',
+//            'product_id' => 'required',
         ];
     }
 

@@ -29,8 +29,8 @@ class ProductRequest extends FormRequest
              'title' => 'required',
              'history' => 'required',
              'story' => 'required',
-             'image' => 'required',
-             'heroImage' => 'required',
+//             'image' => 'required',
+//             'heroImage' => 'required',
         ];
     }
 
