@@ -22,11 +22,16 @@
 
         <h2 class="text-white text-center mt-3">Open Positions</h2>
         {{--TODO add team--}}
-
+        <style>
+            .slick-current{
+                transform: scale(1.1);
+                transition: transform 0.5s;
+            }
+        </style>
         <div class="responsive max-w-7xl mx-auto px-4 lg:px-0 mt-12">
             @foreach($positions as $position)
                 <div class="p-4">
-                    <div class="p-4">
+                    <div class="">
                         <img src="{{@App::make('url')->to('/') . '/storage/' . $position->image  }}"
                              class="w-full aspect-square "/>
                         <h1 class="text-white mt-3 text-lg text-center">
@@ -78,7 +83,7 @@
         </div>
     </div>
 
-    <div class="bg-dark py-12">
+    <div class="bg-dark py-12 px-4 lg:px-0">
         <form action="" class="max-w-4xl mx-auto relative">
             <img src="/images/bubble-1.webp"
                  class="h-full aspect-square absolute -top-24 -right-[14%] hidden lg:block">
