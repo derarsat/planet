@@ -42,6 +42,6 @@ Route::get('/get-in-touch', function () {
 
 Route::get('/product/{id}', function () {
     $product = \App\Models\Product::with('productFlavors')->find(request()->id);
-    if(!$product)  redirect('/');
+    if(!$product)  return redirect('/');
     return view('product', compact('product'));
 });
