@@ -23,13 +23,13 @@
         <h2 class="text-white text-center mt-3">Open Positions</h2>
         {{--TODO add team--}}
 
-        <div class="responsive max-w-7xl mx-auto px-4 lg:px-0">
+        <div class="responsive max-w-7xl mx-auto px-4 lg:px-0 mt-12">
             @foreach($positions as $position)
                 <div class="p-4">
                     <div class="p-4">
                         <img src="{{@App::make('url')->to('/') . '/storage/' . $position->image  }}"
-                             class="w-full aspect-square rounded-full"/>
-                        <h1 class="text-white mt-3   text-lg text-center">
+                             class="w-full aspect-square "/>
+                        <h1 class="text-white mt-3 text-lg text-center">
                             {{$position->title}}
                         </h1>
                     </div>
@@ -78,35 +78,53 @@
         </div>
     </div>
 
+    <div class="bg-dark py-12">
+        <form action="" class="max-w-4xl mx-auto relative">
+            <img src="/images/bubble-1.webp"
+                 class="h-full aspect-square absolute -top-24 -right-[14%] hidden lg:block">
+            <h1 class="text-white font-semibold text-5xl text-center ">
+                YOUR FEEDBACK MATTERS
+            </h1>
+            <div class="flex flex-col gap-4 mt-8">
+                <input required type="text" placeholder="Full Name">
+                <input required type="email" placeholder="Email">
+                <input required type="text" placeholder="Subject">
+                <textarea required placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="">
+                <button class="bg-primary text-white rounded-full px-8 py-3  mt-8">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
     <script>
         $('.responsive').slick({
             dots: true,
-            // centerMode: true,
+            centerMode: true,
             arrows: true,
             speed: 300,
             slidesToShow: 5,
-            slidesToScroll: 5,
+            slidesToScroll: 1,
             responsive: [
 
                 {
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 5,
-                        slidesToScroll: 5,
                     }
                 },
                 {
                     breakpoint: 600,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 3
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
                     }
                 }
             ]

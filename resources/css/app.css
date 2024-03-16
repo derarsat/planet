@@ -41,3 +41,7 @@
 button,a{
     @apply hover:scale-105 transition duration-500 cursor-pointer
 }
+
+input,textarea{
+    @apply focus:outline-none px-4 py-2 rounded-md bg-white bg-opacity-10 block w-full text-white
+}
