@@ -63,10 +63,10 @@
             <p class=" uppercase font-medium mb-6 text-xl">
                 Our Vision
             </p>
-            <div class="w-full relative pb-12">
+            <div class="w-full relative pb-12 text-center">
                 <img src="/images/bubble-1.webp"
                      class="w-96 absolute left-0 -top-64 hidden lg:block">
-                <p class="font-light text-dark w-full flex justify-end">
+                <p class="font-light text-dark w-full flex justify-center lg:justify-end">
                     Be leaders of innovation in Nigeria the giant of africa, <br>
                     as we build and maintain consumer standards for <br>
                     generations of value-driving approach while <br>

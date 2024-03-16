@@ -3,7 +3,7 @@
 @section('content')
     <div class="grid grid-cols-1 gap-12 lg:gap-24">
         {{----}}
-        <div class="relative">
+        <div class="relative min-h-[80vh] bg-cover bg-center" style="background-image: url('images/hero.webp')">
             <div
                 class="absolute inset-0 flex items-center justify-center flex-col gap-8 bg-gradient-to-t from-white via-transparent to-transparent">
                 <h1 class="text-white font-bold text-4xl lg:text-7xl text-center">
@@ -12,7 +12,7 @@
                 <button class="bg-white text-primary px-6 py-2 rounded-full">Learn More</button>
 
             </div>
-            <img src="/images/hero.webp" alt="Planet Bottling Hero">
+
         </div>
         {{----}}
         <div class="text-center grid grid-cols-1 gap-12">
@@ -24,7 +24,7 @@
                 The project started in 2015 when ABN and Monarch decided to
                 replicate the success story in the Nigerian market by investing in the state-of-the-art factory along
                 Lagos
-                Ibadan expressway with over 100,000 sqm which is currently Planet Bottling Company's factory.
+                Ibadan expressway with over 100,000 sqm which is currently Planet Bottling Companys factory.
             </p>
             <div class="flex justify-center">
                 <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
@@ -94,8 +94,9 @@
 
             </div>
         </div>
-        <x-integrates></x-integrates>
+
         {{----}}
         <x-brands></x-brands>
+        <x-integrates></x-integrates>
     </div>
 @endsection

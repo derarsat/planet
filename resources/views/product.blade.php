@@ -5,9 +5,17 @@
         .slick-prev:before, .slick-next:before {
             color: #008BC9;
         }
+        @media (max-width: 540px) {
+            .slick-prev{
+                left: 0;
+            }
+            .slick-next{
+                right: 0;
+            }
+        }
     </style>
     <div class="relative">
-        <img src="{{@App::make('url')->to('/') . '/storage/' . $product->heroImage}}" alt="{{$product->title}}">
+        <div class="min-h-[50vh] lg:min-h-[90vh] bg-center bg-cover" style="background-image: url('{{@App::make('url')->to('/') . '/storage/' . $product->heroImage}}')"> </div>
         <div
             class="absolute z-10 flex items-center justify-center inset-0 bg-gradient-to-t from-primary to-transparent ">
         </div>
@@ -36,7 +44,7 @@
             PRODUCT <br> HISTORY
         </h1>
 
-        <div class="max-w-4xl px-4 mx-auto grid grid-cols-2 gap-12 items-center">
+        <div class="max-w-4xl px-4 mx-auto grid grid-cols-1 lg:grid-cols-2  gap-4 lg:gap-12 items-center">
             <div class="relative">
                 {{--                bubble image--}}
                 <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
@@ -44,14 +52,14 @@
                 <img class="w-full " src="{{@App::make('url')->to('/') . '/storage/' . $product->historyImage}}"
                      alt="{{$product->title}}">
             </div>
-            <p>
+            <p class="text-center lg:text-left">
                 {{$product->history}}
             </p>
         </div>
         <div class="max-w-7xl px-4 lg:px-0 mx-auto relative">
             <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
                  class="w-96 absolute -top-20 -right-20">
-            <h1 class="text-primary font-semibold text-5xl text-center my-12 ">
+            <h1 class="text-primary font-semibold text-5xl text-center mb-12 mt-24 ">
                 THE FLAVORS
             </h1>
             <p class="text-center">
@@ -60,12 +68,12 @@
             </p>
 
 
-            <div class="responsive max-w-7xl mx-auto px-4 lg:px-0 mt-12">
+            <div class="responsive max-w-7xl mx-auto px-8 relative lg:px-0 mt-12">
                 @foreach($product->productFlavors as $flavor)
                     <div class="p-4">
                         <img alt="{{$flavor->title}}"
                              src="{{@App::make('url')->to('/') . '/storage/' . $flavor->image  }}"
-                             class="w-full aspect-square rounded-full"/>
+                             class="w-full aspect-square"/>
                     </div>
                 @endforeach
             </div>
@@ -74,7 +82,7 @@
 
     <script>
         $('.responsive').slick({
-            dots: true,
+            // dots: true,
             // centerMode: true,
             arrows: true,
             speed: 300,

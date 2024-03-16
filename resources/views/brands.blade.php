@@ -8,7 +8,7 @@
             <div class="bg-grey rounded-2xl p-6 lg:p-12 grid grid-cols-3 gap-12 lg:gap-24">
                 <div class="order-2 lg:order-1 flex col-span-3 lg:col-span-2 flex-col items-start justify-between">
                     <div class="flex flex-col gap-4">
-                        <h1 class="text-3xl font-semibold">
+                        <h1 class="text-3xl lg:text-5xl font-semibold">
                             {{$brand->title}}
                         </h1>
                         <p class="font-light">

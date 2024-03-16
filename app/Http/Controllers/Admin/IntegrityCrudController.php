@@ -135,7 +135,7 @@ class IntegrityCrudController extends CrudController
                 'label' => "Grey Scale Image",
                 'name' => "grey_scale_image",
                 'type' => ($show ? 'view' : 'upload'),
-                'view' => 'partials/image',
+                'view' => 'partials/grey_scale_image',
                 'upload' => true,
             ]
         ];

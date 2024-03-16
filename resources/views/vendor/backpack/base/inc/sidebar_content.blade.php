@@ -9,3 +9,7 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('event') }}"><i class="nav-icon la la-calendar"></i> Events</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('news') }}"><i class="nav-icon la la-newspaper"></i> News</a></li>
 
+
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('integrities') }}"><i class="nav-icon la la-question"></i> Integrities</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('test') }}"><i class="nav-icon la la-question"></i> Tests</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('integrity') }}"><i class="nav-icon la la-question"></i> Integrities</a></li>

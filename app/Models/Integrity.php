@@ -21,6 +21,7 @@ class Integrity extends Model
     protected $fillable = [
         'title',
         'image',
+        'grey_scale_image',
     ];
 
     /**
@@ -44,6 +45,23 @@ class Integrity extends Model
     }
 
     public function getImageAttribute($value)
+    {
+        return str_replace('storage/integrates', 'integrates', $value);
+    }
+
+
+    public function setGreyScaleImageAttribute($value)
+    {
+        $attribute_name = "grey_scale_image";
+        $destination_path = "public/integrates";
+        $image = Image::make($value)->encode('jpg', 90);
+        $filename = md5($value . time()) . '.jpg';
+        Storage::put($destination_path . '/' . $filename, $image->stream());
+        $public_destination_path = Str::replaceFirst('public/', 'storage/', $destination_path);
+        $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;
+    }
+
+    public function getGreyScaleImageAttribute($value)
     {
         return str_replace('storage/integrates', 'integrates', $value);
     }

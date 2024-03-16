@@ -1,8 +1,29 @@
+<style>
+    .change .bar-1 {
+        -webkit-transform: rotate(-45deg) translate(-10px, 5px);
+        transform: rotate(-45deg) translate(-7px, 0px);
+    }
+
+    .change .bar-2 {opacity:0;}
+
+    .change .bar-3 {
+        -webkit-transform: rotate(45deg) translate(-10px, 5px);
+        transform: rotate(45deg) translate(-10px, -5px);
+    }
+
+</style>
 <nav class="border-b border-gray-300">
     <div class="container flex items-center py-4 justify-between">
         <a href="/">
             <img src="/planet-bottling.png" alt="Planet Bottling" class="w-40">
         </a>
+        <div class="burger-menu block lg:hidden ">
+            <div class="bar flex flex-col gap-1">
+                <span class="bar-1 transition duration-1000 w-9 h-1 rounded-full block bg-primary"> </span>
+                <span class="bar-2 transition duration-1000 w-9 h-1 rounded-full block bg-primary"> </span>
+                <span class="bar-3 transition duration-1000 w-9 h-1 rounded-full block bg-primary"> </span>
+            </div>
+        </div>
         <div class="text-[#384B53] hidden lg:flex gap-4 items-center  font-light">
             <a href="/who-we-are">Who We Are</a>
             <a href="/brands">Brands</a>
@@ -37,3 +58,22 @@
         </div>
     </div>
 </nav>
+
+<div class="menu hidden ">
+    <div class="bg-primary text-white flex  flex-col gap-2 p-8">
+        <a href="/who-we-are">Who We Are</a>
+        <a href="/brands">Brands</a>
+        <a href="/global-presence">Global Presence</a>
+        <a href="/media">Media</a>
+        <a href="/get-in-touch">Get In Touch</a>
+    </div>
+</div>
+
+
+
+<script>
+    $(".burger-menu ").on("click",".bar",function(){
+        $(".menu").slideToggle();
+        $(".bar").toggleClass('change');
+    });
+</script>
