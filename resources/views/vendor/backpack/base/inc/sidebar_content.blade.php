@@ -8,3 +8,4 @@
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('user') }}"><i class="nav-icon la la-users"></i> Users</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('event') }}"><i class="nav-icon la la-calendar"></i> Events</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('news') }}"><i class="nav-icon la la-newspaper"></i> News</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('form-submission') }}"><i class="nav-icon la la-question"></i> Form Submissions</a></li>

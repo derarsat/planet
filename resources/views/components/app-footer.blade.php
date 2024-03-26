@@ -12,7 +12,7 @@
                     <a href="">Brands</a>
                     <a href="">Global Presence</a>
                     <a href="">Media</a>
-                    <a href="">Get In Touch</a>
+                    <a href="get-in-touch">Get In Touch</a>
                 </div>
 
                 <div class="grid grid-cols-1 gap-2 font-light">

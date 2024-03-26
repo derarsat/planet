@@ -45,3 +45,14 @@ button,a{
 input,textarea{
     @apply focus:outline-none px-4 py-2 rounded-md bg-white bg-opacity-10 block w-full text-white
 }
+
+label{
+    @apply block mb-2
+}
+
+input,select,textarea{
+    @apply border border-primary border-opacity-50 block w-full h-12 rounded-lg px-4 outline-none text-black
+}
+select{
+    @apply bg-primary text-white
+}

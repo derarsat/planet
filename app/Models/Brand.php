@@ -20,9 +20,12 @@ class Brand extends Model
      */
     protected $fillable = [
         'title',
+        'category',
         'image',
         'greyscaleImage',
         'description',
+        'hero',
+        'greyscaleHero',
     ];
 
     /**
@@ -68,5 +71,42 @@ class Brand extends Model
     public function getGreyscaleImageAttribute($value)
     {
         return str_replace('storage/brands', 'brands', $value);
+    }
+
+
+    public function getHeroAttribute($value)
+    {
+        return str_replace('storage/brands', 'brands', $value);
+    }
+    public function getGreyscaleHeroAttribute($value)
+    {
+        return str_replace('storage/brands', 'brands', $value);
+    }
+
+
+
+
+    public function setGreyscaleHeroAttribute($value)
+    {
+        $attribute_name = "greyscaleHero";
+        $destination_path = "public/brands";
+        $image = Image::make($value)->encode('jpg', 90);
+        $filename = md5($value . time()) . '.jpg';
+        Storage::put($destination_path . '/' . $filename, $image->stream());
+        $public_destination_path = Str::replace('public/', 'storage/', $destination_path);
+        $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;
+    }
+
+
+
+    public function setHeroAttribute($value)
+    {
+        $attribute_name = "hero";
+        $destination_path = "public/brands";
+        $image = Image::make($value)->encode('jpg', 90);
+        $filename = md5($value . time()) . '.jpg';
+        Storage::put($destination_path . '/' . $filename, $image->stream());
+        $public_destination_path = Str::replace('public/', 'storage/', $destination_path);
+        $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $brands = \App\Models\Brand::all();
-    return view('index',compact('brands'));
+    return view('index', compact('brands'));
 });
 Route::get('/who-we-are', function () {
     $integrates = \App\Models\Integrity::all();
@@ -42,6 +43,24 @@ Route::get('/get-in-touch', function () {
 
 Route::get('/product/{id}', function () {
     $product = \App\Models\Product::with('productFlavors')->find(request()->id);
-    if(!$product)  return redirect('/');
+    if (!$product) return redirect('/');
     return view('product', compact('product'));
+});
+
+Route::get('/form/{type}', function () {
+    return view('form', ['type' => request()->type]);
+});
+
+Route::post("/form", function () {
+    $data = request()->all();
+    if (request()->hasFile('cv')) {
+        $data['cv'] = str_replace('/public','',@App::make('url')->to('/') . '/storage/' . request()->file('cv')->store('public/cvs'));
+    }
+    if (request()->hasFile('cover_letter')) {
+        $data['cover_letter'] = str_replace('/public','',@App::make('url')->to('/') . '/storage/' . request()->file('cover_letter')->store('public/cover_letters'));
+
+    }
+
+    \App\Models\FormSubmission::create($data);
+    return redirect()->back()->with('success', 'Form submitted successfully');
 });

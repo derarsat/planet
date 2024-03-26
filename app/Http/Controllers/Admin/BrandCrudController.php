@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\BrandRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
  * Class BrandCrudController
  * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
+ * @property-read CrudPanel $crud
  */
 class BrandCrudController extends CrudController
 {
@@ -42,6 +43,24 @@ class BrandCrudController extends CrudController
             'upload'    => true,
             'prefix'    => 'uploads/brands',
         ]);
+
+        $this->crud->addField([
+            'name'      => 'greyscaleHero',
+            'label'     => 'Hero Greyscale Image',
+            'type'      => 'image',
+            'disk'      => 'public',
+            'upload'    => true,
+            'prefix'    => 'uploads/brands',
+        ]);
+
+        $this->crud->addField([
+            'name'      => 'hero',
+            'label'     => 'Hero',
+            'type'      => 'image',
+            'disk'      => 'public',
+            'upload'    => true,
+            'prefix'    => 'uploads/brands',
+        ]);
     }
 
     protected function setupListOperation(): void
@@ -49,6 +68,7 @@ class BrandCrudController extends CrudController
         $this->crud->addColumns($this->getFieldsData(TRUE));
 
         CRUD::column('title');
+        CRUD::column('category');
         CRUD::column('description');
         $this->crud->addColumn([
             'name' => 'image',
@@ -60,19 +80,43 @@ class BrandCrudController extends CrudController
             'label' => "Greyscale Image",
             'type' => 'image',
         ]);
+
+        $this->crud->addColumn([
+            'name' => 'greyscaleHero',
+            'label' => "Hero Greyscale Image",
+            'type' => 'image',
+        ]);
+
+        $this->crud->addColumn([
+            'name' => 'hero',
+            'label' => "Hero",
+            'type' => 'image',
+        ]);
     }
 
     protected function setupCreateOperation(): void
     {
         CRUD::setValidation(BrandRequest::class);
         CRUD::field('title');
+        CRUD::field('category');
         CRUD::field('description');
+
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
             ]);
 
         CRUD::field('greyscaleImage')
+            ->type('upload')
+            ->withFiles([
+            ]);
+
+        CRUD::field('greyscaleHero')
+            ->type('upload')
+            ->withFiles([
+            ]);
+
+        CRUD::field('hero')
             ->type('upload')
             ->withFiles([
             ]);
@@ -92,6 +136,11 @@ class BrandCrudController extends CrudController
                 'type' => 'text',
             ],
             [
+                'name' => 'category',
+                'label' => 'Category',
+                'type' => 'text',
+            ],
+            [
                 'name' => 'description',
                 'label' => 'Description',
                 'type' => 'textarea',
@@ -108,6 +157,20 @@ class BrandCrudController extends CrudController
                 'name' => "greyscaleImage",
                 'type' => ($show ? 'view' : 'upload'),
                 'view' => 'partials/greyscale-image',
+                'upload' => true,
+            ],
+            [
+                'label' => "Hero Greyscale Image",
+                'name' => "greyscaleHero",
+                'type' => ($show ? 'view' : 'upload'),
+                'view' => 'partials/greyscale-hero',
+                'upload' => true,
+            ],
+            [
+                'label' => "Hero Image",
+                'name' => "hero",
+                'type' => ($show ? 'view' : 'upload'),
+                'view' => 'partials/hero',
                 'upload' => true,
             ]
         ];

@@ -84,7 +84,7 @@
                         we’ll get back to you promptly.
                     </p>
                     <div>
-                        <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Contact Us</button>
+                        <a href="/get-in-touch" class="bg-primary text-white font-light px-6 py-2 rounded-full">Contact Us</a>
 
                     </div>
                 </div>

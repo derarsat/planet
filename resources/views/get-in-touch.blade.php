@@ -43,9 +43,9 @@
         </div>
         <div class="flex items-center justify-center">
 
-            <button class="bg-white text-primary rounded-full px-6 py-3 mx-auto block mt-8">
+            <a href="/form/team" class="bg-white text-primary rounded-full px-6 py-3 mx-auto block mt-8">
                 Apply Now
-            </button>
+            </a>
         </div>
     </div>
 
@@ -60,6 +60,9 @@
             promoting our unique, marketable, and top-quality products through strong, <br> tested, and proven marketing
             strategies.
         </p>
+        <div class="flex justify-center">
+            <a href="/form/marketing" class="bg-primary mx-auto inline-block text-white px-4 py-2 rounded-full mb-8">Contact Us</a>
+        </div>
 
         <img src="/images/marketing.webp" alt="Planet Bottling Marketing" class="w-full">
     </div>
@@ -78,7 +81,7 @@
                     for
                     generations of value-driven approach while continuously searching for the best.
                 </p>
-                <button class="bg-primary text-white px-4 py-2 rounded-full mt-4">Contact Us</button>
+                <a href="/form/sales" class="bg-primary inline-block text-white px-4 py-2 rounded-full mt-4">Contact Us</a>
             </div>
         </div>
     </div>
