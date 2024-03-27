@@ -55,8 +55,8 @@ class Product extends Model
     {
         $attribute_name = "image";
         $destination_path = "public/products";
-        $image = Image::make($value)->encode('jpg', 90);
-        $filename = md5($value . time()) . '.jpg';
+        $image = Image::make($value)->encode('png', 90);
+        $filename = md5($value . time()) . '.png';
         Storage::put($destination_path . '/' . $filename, $image->stream());
         $public_destination_path = Str::replaceFirst('public/', 'storage/', $destination_path);
         $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;
@@ -66,8 +66,8 @@ class Product extends Model
     {
         $attribute_name = "heroImage";
         $destination_path = "public/products";
-        $image = Image::make($value)->encode('jpg', 90);
-        $filename = md5($value . time()) . '.jpg';
+        $image = Image::make($value)->encode('png', 90);
+        $filename = md5($value . time()) . '.png';
         Storage::put($destination_path . '/' . $filename, $image->stream());
         $public_destination_path = Str::replaceFirst('public/', 'storage/', $destination_path);
         $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;
@@ -77,8 +77,8 @@ class Product extends Model
     {
         $attribute_name = "historyImage";
         $destination_path = "public/products";
-        $image = Image::make($value)->encode('jpg', 90);
-        $filename = md5($value . time()) . '.jpg';
+        $image = Image::make($value)->encode('png', 90);
+        $filename = md5($value . time()) . '.png';
         Storage::put($destination_path . '/' . $filename, $image->stream());
         $public_destination_path = Str::replaceFirst('public/', 'storage/', $destination_path);
         $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;

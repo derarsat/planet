@@ -16,7 +16,7 @@
         <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
 
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 container py-6 lg:py-0">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 container py-6 lg:py-0">
         @foreach($brands as $brand)
             <div class="aspect-square group relative rounded-3xl overflow-hidden">
                 <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->greyscaleImage  }}" class="absolute inset-0 h-full w-full opacity-100 aspect-square transition duration-1000 group-hover:opacity-0"/>
