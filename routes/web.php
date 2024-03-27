@@ -24,6 +24,7 @@ Route::get('/who-we-are', function () {
 });
 Route::get('/brands', function () {
     $brands = \App\Models\Brand::with('products')->get();
+
     return view('brands', compact('brands'));
 });
 

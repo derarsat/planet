@@ -19,5 +19,13 @@
         </p>
         <img src="/images/brands-table.webp" alt="">
 
+
+        <div>
+            <h1 class="text-primary text-center mt-12 lg:mt-24 mb-6 text-lg">
+                Our brands are already present in over 60 countries globally and 40 African countries.
+            </h1>
+        </div>
+        <img class="  max-w-4xl mx-auto" src="/images/global.png" alt="">
+
     </div>
 @endsection

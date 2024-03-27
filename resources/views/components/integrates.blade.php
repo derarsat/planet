@@ -39,10 +39,11 @@
                              class="normal absolute inset-0 transition duration-1000 opacity-0" alt="{{$integrate->title}}"/>
                         <img src="{{@App::make('url')->to('/') . '/storage/' . $integrate->grey_scale_image  }}"
                              class="grey absolute inset-0 transition duration-1000 opacity-100" alt="{{$integrate->title}}"/>
-                        <h1 class="text-white mt-3   text-lg text-center">
-                            {{$integrate->title}}
-                        </h1>
+
                     </div>
+                    <h1 class="text-white mt-3   text-lg text-center">
+                        {{$integrate->title}}
+                    </h1>
                 </div>
             @endforeach
         </div>

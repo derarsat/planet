@@ -67,8 +67,8 @@
                 <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
 
             </div>
-            <img src="/images/map.webp" alt="Planet Bottling Locations"
-                 class="w-[32rem] max-w-full mx-auto">
+            <img src="/images/map.png" alt="Planet Bottling Locations"
+                 class="w-[40rem] max-w-full mx-auto">
         </div>
         {{----}}
         {{----}}
@@ -97,6 +97,6 @@
 
         {{----}}
         <x-brands></x-brands>
-        <x-integrates></x-integrates>
+{{--        <x-integrates></x-integrates>--}}
     </div>
 @endsection

@@ -6,13 +6,13 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 text-white mt-12 items-start justify-start">
                 <div class="grid grid-cols-1 gap-2 font-light">
-                    <a href="" class="font-bold mb-6 ">Useful Links</a>
-                    <a href="">Home</a>
-                    <a href="">Who We Are</a>
-                    <a href="">Brands</a>
-                    <a href="">Global Presence</a>
-                    <a href="">Media</a>
-                    <a href="get-in-touch">Get In Touch</a>
+                    <a href="#" class="font-bold mb-6 ">Useful Links</a>
+                    <a href="/">Home</a>
+                    <a href="/who-we-are">Who We Are</a>
+                    <a href="/brands">Brands</a>
+                    <a href="/global-presence">Global Presence</a>
+                    <a href="/media">Media</a>
+                    <a href="/get-in-touch">Get In Touch</a>
                 </div>
 
                 <div class="grid grid-cols-1 gap-2 font-light">

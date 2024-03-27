@@ -23,8 +23,11 @@
                             {{$brand->description}}
                         </p>
                     </div>
-                    <a href="/product/{{isset($brand->products) ?? $brand->products[0]->id}}"
-                       class="bg-primary text-white px-4 py-2 rounded-full mt-6 lg:mt-0">Learn More</a>
+                    @if(count($brand->products) > 0)
+                        <a href="/product/{{$brand->products[0]->id}}"
+                           class="bg-primary text-white px-4 py-2 rounded-full mt-6 lg:mt-0">Learn More {{isset($brand->products) ?? $brand->products[0]->id}}</a>
+
+                    @endif
                 </div>
                 <div class="aspect-square group relative rounded-3xl overflow-hidden">
                     <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->hero  }}"
