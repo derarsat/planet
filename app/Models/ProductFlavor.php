@@ -21,6 +21,7 @@ class ProductFlavor extends Model
     protected $fillable = [
         'title',
         'image',
+        'hover_image',
         'product_id',
     ];
 
@@ -52,6 +53,24 @@ class ProductFlavor extends Model
     }
 
     public function getImageAttribute($value)
+    {
+        return str_replace('storage/product-flavors', 'product-flavors', $value);
+    }
+
+
+
+    public function sethoverImageAttribute($value)
+    {
+        $attribute_name = "hover_image";
+        $destination_path = "public/product-flavors";
+        $image = Image::make($value)->encode('png', 90);
+        $filename = md5($value . time()) . '.png';
+        Storage::put($destination_path . '/' . $filename, $image->stream());
+        $public_destination_path = Str::replaceFirst('public/', 'storage/', $destination_path);
+        $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;
+    }
+
+    public function gethoverImageAttribute($value)
     {
         return str_replace('storage/product-flavors', 'product-flavors', $value);
     }

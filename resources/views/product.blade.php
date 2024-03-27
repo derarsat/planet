@@ -13,6 +13,20 @@
                 right: 0;
             }
         }
+
+        .slick-slide:hover img.normal {
+            opacity: 1;
+        }
+        .slick-slide:hover img.grey {
+            opacity: 0;
+        }
+        .slick-current img.normal {
+            opacity: 1;
+
+        }
+         .slick-current img.grey {
+            opacity: 0;
+        }
     </style>
     <div class="relative">
         <div class="min-h-[50vh] lg:min-h-[90vh] bg-center bg-cover" style="background-image: url('{{@App::make('url')->to('/') . '/storage/' . $product->heroImage}}')"> </div>
@@ -70,11 +84,14 @@
 
             <div class="responsive max-w-7xl mx-auto px-8 relative lg:px-0 mt-12">
                 @foreach($product->productFlavors as $flavor)
-                    <div class="p-4">
-                        <img alt="{{$flavor->title}}"
-                             src="{{@App::make('url')->to('/') . '/storage/' . $flavor->image  }}"
-                             class="w-full aspect-square"/>
-                    </div>
+                  <div class="p-4">
+                      <div class="aspect-square relative">
+                          <img src="{{@App::make('url')->to('/') . '/storage/' . $flavor->hover_image  }}"
+                               class="normal w-full h-full absolute inset-0 transition duration-1000 opacity-0" alt="{{$flavor->title}}"/>
+                          <img src="{{@App::make('url')->to('/') . '/storage/' . $flavor->image  }}"
+                               class="grey absolute w-full h-full inset-0 transition duration-1000 opacity-100" alt="{{$flavor->title}}"/>
+                      </div>
+                  </div>
                 @endforeach
             </div>
         </div>
@@ -82,12 +99,14 @@
 
     <script>
         $('.responsive').slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
             // dots: true,
             // centerMode: true,
             arrows: true,
             speed: 300,
             slidesToShow: 5,
-            slidesToScroll: 5,
+            slidesToScroll: 1,
             responsive: [
 
                 {

@@ -13,8 +13,15 @@
     <div class="container">
         <div class="slider">
             @foreach($events as $event)
-                <h1>{{$event->title}}</h1>
-                <img src="{{@App::make('url')->to('/storage') . '/' . $event->image}}" alt="">
+             <div class="p-4">
+                 <div class="relative aspect-square">
+                     <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent flex justify-end p-4 flex-col text-white">
+                         <h1 class="font-medium text-lg">{{$event->title}}</h1>
+                         <h1>{{$event->content}}</h1>
+                     </div>
+                     <img class="w-full h-full" src="{{@App::make('url')->to('/') . '/' . $event->image  }}" alt="{{$event->title}}">
+                 </div>
+             </div>
             @endforeach
         </div>
     </div>
@@ -25,6 +32,8 @@
         $('.slider').slick({
             infinite: true,
             slidesToShow: 4,
+            autoplay: true,
+            autoplaySpeed: 4000,
             slidesToScroll: 4,
             dots: true,
             arrows: true,

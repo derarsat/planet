@@ -77,8 +77,6 @@ class EventCrudController extends CrudController
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
-                'disk' => 'public', // the disk where file will be stored
-                'path' => 'uploads', // the path inside the disk where file will be stored
             ]);
 
         /**

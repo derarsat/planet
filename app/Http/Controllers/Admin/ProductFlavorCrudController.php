@@ -37,6 +37,14 @@ class ProductFlavorCrudController extends CrudController
             'upload'    => true,
             'prefix'    => 'uploads/product-flavors',
         ]);
+        $this->crud->addField([
+            'name'      => 'hover_image',
+            'label'     => 'Hover Image',
+            'type'      => 'image',
+            'disk'      => 'public',
+            'upload'    => true,
+            'prefix'    => 'uploads/product-flavors',
+        ]);
     }
 
     /**
@@ -53,6 +61,11 @@ class ProductFlavorCrudController extends CrudController
         $this->crud->addColumn([
             'name' => 'image',
             'label' => "Image",
+            'type' => 'image',
+        ]);
+        $this->crud->addColumn([
+            'name' => 'hover_image',
+            'label' => "Hover Image",
             'type' => 'image',
         ]);
 
@@ -79,8 +92,14 @@ class ProductFlavorCrudController extends CrudController
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
-                'disk' => 'public', // the disk where file will be stored
-                'path' => 'uploads', // the path inside the disk where file will be stored
+                'disk' => 'public',
+                'path' => 'uploads',
+            ]);
+        CRUD::field('hover_image')
+            ->type('upload')
+            ->withFiles([
+                'disk' => 'public',
+                'path' => 'uploads',
             ]);
 
         /**
@@ -112,6 +131,13 @@ class ProductFlavorCrudController extends CrudController
                 'name' => "image",
                 'type' => ($show ? 'view' : 'upload'),
                 'view' => 'partials/image',
+                'upload' => true,
+            ],
+            [
+                'label' => "Hover Image",
+                'name' => "hover_image",
+                'type' => ($show ? 'view' : 'upload'),
+                'view' => 'partials/hover_image',
                 'upload' => true,
             ]
         ];

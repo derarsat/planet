@@ -29,7 +29,7 @@
 
                     @endif
                 </div>
-                <div class="aspect-square group relative rounded-3xl overflow-hidden">
+                <div class=" aspect-video group relative rounded-3xl overflow-hidden">
                     <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->hero  }}"
                          class="absolute inset-0 h-full w-full opacity-100 aspect-square transition duration-1000 group-hover:opacity-0"/>
                     <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->greyscaleHero  }}"

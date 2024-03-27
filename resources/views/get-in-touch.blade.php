@@ -110,6 +110,8 @@
     <script>
         $('.responsive').slick({
             dots: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
             centerMode: true,
             arrows: true,
             speed: 300,

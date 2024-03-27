@@ -66,12 +66,17 @@
             <div class="w-full relative pb-12 text-center">
                 <img src="/images/bubble-1.webp"
                      class="w-96 absolute left-0 -top-64 hidden lg:block">
-                <p class="font-light text-dark w-full flex justify-center lg:justify-end">
-                    Be leaders of innovation in Nigeria the giant of africa, <br>
-                    as we build and maintain consumer standards for <br>
-                    generations of value-driving approach while <br>
-                    continuously searching for the best.
-                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+                    <img src="/images/m.webp"
+                         class="w-[32rem] max-w-full ">
+                    <p class="font-light text-dark text-center lg:text-left mt-4 lg:mt-0">
+                        Be leaders of innovation in Nigeria the giant of africa, <br>
+                        as we build and maintain consumer standards for <br>
+                        generations of value-driving approach while <br>
+                        continuously searching for the best.
+                    </p>
+                </div>
+
             </div>
         </div>
        <x-integrates></x-integrates>

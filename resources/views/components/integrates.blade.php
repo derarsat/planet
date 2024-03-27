@@ -26,7 +26,7 @@
                 transition: all 1s;
             }
             #int-wrap .slick-current{
-                transform: scale(1.3);
+                transform: scale(1.1);
 
                 z-index: 1;
             }
@@ -39,7 +39,6 @@
                              class="normal absolute inset-0 transition duration-1000 opacity-0" alt="{{$integrate->title}}"/>
                         <img src="{{@App::make('url')->to('/') . '/storage/' . $integrate->grey_scale_image  }}"
                              class="grey absolute inset-0 transition duration-1000 opacity-100" alt="{{$integrate->title}}"/>
-
                     </div>
                     <h1 class="text-white mt-3   text-lg text-center">
                         {{$integrate->title}}
@@ -55,6 +54,8 @@
     $('.responsive').slick({
         dots: true,
         centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         arrows: true,
         speed: 300,
         slidesToShow: 5,
