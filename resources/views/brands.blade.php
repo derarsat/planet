@@ -13,7 +13,7 @@
     <div class="max-w-7xl mx-auto py-12 grid grid-cols-1 gap-4 lg:gap-12 text-dark px-4 lg:px-0">
         @foreach($brands as $brand)
             <div data-category="{{$brand->category}}"
-                 class="dis-cat bg-grey rounded-2xl flex items-center flex-wrap gap-8 p-4 lg:p-8">
+                 class="dis-cat bg-grey rounded-2xl flex items-center lg:flex-nowrap flex-wrap gap-8 p-4 lg:p-8">
                 <div class="order-2 lg:order-1 flex col-span-3 lg:col-span-2 flex-col items-start justify-between">
                     <div class="flex flex-col gap-4">
                         <h1 class="text-3xl lg:text-5xl font-semibold">
