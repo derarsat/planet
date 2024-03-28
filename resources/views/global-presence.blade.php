@@ -26,7 +26,7 @@
                 40 African countries.
             </h1>
         </div>
-        <img class="  w-[40rem] max-w-full mx-auto" src="/images/global.png" alt="">
+        <img class="  w-[40rem] max-w-full mx-auto" src="/images/global2.webp" alt="">
 
     </div>
 @endsection
