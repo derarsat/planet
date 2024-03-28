@@ -83,6 +83,10 @@ class ProductCrudController extends CrudController
             'label' => "Product Hero Image",
             'type' => 'image',
         ]);
+        CRUD::column('facebook');
+        CRUD::column('twitter');
+        CRUD::column('instagram');
+        CRUD::column('tiktok');
     }
 
     protected function setupCreateOperation()
@@ -92,6 +96,10 @@ class ProductCrudController extends CrudController
         CRUD::field('history');
         CRUD::field('story');
         CRUD::field('brand_id');
+        CRUD::field('facebook');
+        CRUD::field('twitter');
+        CRUD::field('instagram');
+        CRUD::field('tiktok');
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
@@ -119,6 +127,26 @@ class ProductCrudController extends CrudController
             [
                 'name' => 'title',
                 'label' => 'Title',
+                'type' => 'text',
+            ],
+            [
+                'name' => 'facebook',
+                'label' => 'Facebook',
+                'type' => 'text',
+            ],
+            [
+                'name' => 'twitter',
+                'label' => 'Twitter',
+                'type' => 'text',
+            ],
+            [
+                'name' => 'instagram',
+                'label' => 'Instagram',
+                'type' => 'text',
+            ],
+            [
+                'name' => 'tiktok',
+                'label' => 'Tiktok',
                 'type' => 'text',
             ],
 //            [

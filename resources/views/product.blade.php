@@ -43,6 +43,13 @@
             <p class="text-white  lg:px-0 mx-auto text-center mt-8 mb-24 font-light">
                 {{$product->story}}
             </p>
+
+            <div class="flex item-center justify-center gap-4 mb-12">
+                <a target="_blank" href="{{$product->facebook}}"><img class="w-16" src="/images/social/facebook.png"/></a>
+                <a target="_blank" href="{{$product->instagram}}"><img class="w-16" src="/images/social/instagram.png"/></a>
+                <a target="_blank" href="{{$product->twitter}}"><img class="w-16" src="/images/social/twitter.png"/></a>
+                <a target="_blank" href="{{$product->tiktok}}"><img class="w-16" src="/images/social/tiktok.png"/></a>
+            </div>
             {{--        machine image--}}
             <img src="/images/machine.webp" class="w-full" alt="Planet Bottling Marketing"
             >

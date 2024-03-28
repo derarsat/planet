@@ -19,16 +19,7 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'title',
-        'story',
-        'history',
-        'brand_id',
-        'image',
-        'brand',
-        'heroImage',
-        'historyImage',
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be cast to native types.

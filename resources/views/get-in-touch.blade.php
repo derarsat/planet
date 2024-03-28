@@ -23,7 +23,7 @@
         <h2 class="text-white text-center mt-3">Open Positions</h2>
         {{--TODO add team--}}
         <style>
-            .slick-current{
+            .slick-current {
                 transform: scale(1.1);
                 transition: transform 0.5s;
             }
@@ -61,7 +61,8 @@
             strategies.
         </p>
         <div class="flex justify-center">
-            <a href="/form/marketing" class="bg-primary mx-auto inline-block text-white px-4 py-2 rounded-full mb-8">Contact Us</a>
+            <a href="/form/marketing" class="bg-primary mx-auto inline-block text-white px-4 py-2 rounded-full mb-8">Contact
+                Us</a>
         </div>
 
         <img src="/images/marketing.webp" alt="Planet Bottling Marketing" class="w-full">
@@ -72,37 +73,50 @@
             Sales
         </h1>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-7xl px-4 lg:px-0 py-6 lg:py-0">
+        <div class=" mx-auto max-w-7xl px-4 lg:px-0 py-12 relative">
             <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
-                 class="w-full hidden lg:block">
-            <div>
-                <p class="font-light">
-                    Be leaders of innovation in Nigeria the giant of Africa, as we build and maintain consumer standards
-                    for
-                    generations of value-driven approach while continuously searching for the best.
-                </p>
-                <a href="/form/sales" class="bg-primary inline-block text-white px-4 py-2 rounded-full mt-4">Contact Us</a>
-            </div>
+                 class=" hidden lg:block absolute -left-[16rem] -top-[8rem] w-[32rem]">
+                <div class="flex items-center justify-center gap-12 flex-wrap lg:flex-nowrap">
+                    <img src="/images/s2.webp"
+                         class="w-[32rem] max-w-full ">
+
+                    <div>
+                        <p class="font-light">
+                            Be leaders of innovation in Nigeria the giant of Africa, as we build and maintain consumer
+                            standards
+                            for
+                            generations of value-driven approach while continuously searching for the best.
+                        </p>
+                        <a href="/form/sales" class="bg-primary inline-block text-white px-4 py-2 rounded-full mt-4">Contact
+                            Us</a>
+                    </div>
+                </div>
         </div>
     </div>
 
     <div class="bg-dark py-12 px-4 lg:px-0">
-        <form action="" class="max-w-4xl mx-auto relative">
+        <form action="" class="max-w-6xl mx-auto relative px-2 lg:px-0 overflow-x-hidden">
             <img src="/images/bubble-1.webp"
                  class="h-full aspect-square absolute -top-24 -right-[14%] hidden lg:block">
-            <h1 class="text-white font-semibold text-5xl text-center ">
-                YOUR FEEDBACK MATTERS
-            </h1>
-            <div class="flex flex-col gap-4 mt-8">
-                <input required type="text" placeholder="Full Name">
-                <input required type="email" placeholder="Email">
-                <input required type="text" placeholder="Subject">
-                <textarea required placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="">
-                <button class="bg-primary text-white rounded-full px-8 py-3  mt-8">
-                    Submit
-                </button>
+
+            <div class="flex items-stretch flex-wrap justify-between gap-8 w-full">
+                <img src="/images/your-feedback.webp" alt="Your feedback" class="w-full lg:w-[20rem]">
+                <div class="flex-grow">
+                    <h1 class="text-white font-semibold text-5xl text-center opacity-80 ">
+                        Your feedback matters
+                    </h1>
+                    <div class="flex flex-col gap-4 mt-8">
+                        <input required type="text" placeholder="Full Name">
+                        <input required type="email" placeholder="Email">
+                        <input required type="text" placeholder="Subject">
+                        <textarea required placeholder="Message" name="" id="" class="h-40"></textarea>
+                    </div>
+                    <div class="">
+                        <button class="bg-primary text-white rounded-full px-8 py-3  mt-8">
+                            Submit
+                        </button>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
