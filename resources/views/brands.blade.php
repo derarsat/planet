@@ -10,7 +10,7 @@
             <button class="px-4 py-2 rounded-full cat ">{{$brand->category}}</button>
         @endforeach
     </div>
-    <div class="max-w-7xl mx-auto py-12 grid grid-cols-1 gap-4 lg:gap-12 text-dark px-2 lg:px-0">
+    <div class="max-w-7xl mx-auto py-12 grid grid-cols-1 gap-4 lg:gap-12 text-dark px-4 lg:px-0">
         @foreach($brands as $brand)
             <div data-category="{{$brand->category}}"
                  class="dis-cat bg-grey rounded-2xl flex items-center flex-wrap gap-8 p-4 lg:p-8">

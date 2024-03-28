@@ -5,6 +5,7 @@
             color: #fff;
         }
     </style>
+<div class="max-w-screen overflow-x-hidden">
     <div class="relative h-[85vh] bg-center bg-cover"
          style="background-image: url('/images/factory.webp')">
         <div
@@ -76,26 +77,26 @@
         <div class=" mx-auto max-w-7xl px-4 lg:px-0 py-12 relative">
             <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
                  class=" hidden lg:block absolute -left-[16rem] -top-[8rem] w-[32rem]">
-                <div class="flex items-center justify-center gap-12 flex-wrap lg:flex-nowrap">
-                    <img src="/images/s2.webp"
-                         class="w-[32rem] max-w-full ">
+            <div class="flex items-center justify-center gap-12 flex-wrap lg:flex-nowrap">
+                <img src="/images/s2.webp"
+                     class="w-[32rem] max-w-full ">
 
-                    <div>
-                        <p class="font-light">
-                            Be leaders of innovation in Nigeria the giant of Africa, as we build and maintain consumer
-                            standards
-                            for
-                            generations of value-driven approach while continuously searching for the best.
-                        </p>
-                        <a href="/form/sales" class="bg-primary inline-block text-white px-4 py-2 rounded-full mt-4">Contact
-                            Us</a>
-                    </div>
+                <div>
+                    <p class="font-light">
+                        Be leaders of innovation in Nigeria the giant of Africa, as we build and maintain consumer
+                        standards
+                        for
+                        generations of value-driven approach while continuously searching for the best.
+                    </p>
+                    <a href="/form/sales" class="bg-primary inline-block text-white px-4 py-2 rounded-full mt-4">Contact
+                        Us</a>
                 </div>
+            </div>
         </div>
     </div>
 
     <div class="bg-dark py-12 px-4 lg:px-0">
-        <form action="" class="max-w-6xl mx-auto relative px-2 lg:px-0 overflow-x-hidden">
+        <form action="" class="max-w-6xl mx-auto relative px-4 lg:px-0 overflow-x-hidden">
             <img src="/images/bubble-1.webp"
                  class="h-full aspect-square absolute -top-24 -right-[14%] hidden lg:block">
 
@@ -121,6 +122,7 @@
         </form>
     </div>
 
+</div>
     <script>
         $('.responsive').slick({
             dots: true,
