@@ -26,7 +26,8 @@
                 40 African countries.
             </h1>
         </div>
-        <img class="  w-[40rem] max-w-full mx-auto" src="/images/global2.webp" alt="">
+        <img src="/images/new-map.png" alt="Planet Bottling Locations"
+             class="w-[50rem] max-w-full mx-auto mt-12">
 
     </div>
 @endsection

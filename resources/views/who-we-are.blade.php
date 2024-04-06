@@ -21,7 +21,7 @@
                 quality <br> and value in the Nigerian market.
             </p>
             <div class="relative">
-                <img class="w-full mx-auto mt-24" src="/images/who-we-are.webp"
+                <img class="w-screen mx-auto mt-24" src="/images/who-we-are.webp"
                      alt="Planet Bottling Hero">
 
                 <img src="/images/bubble-1.webp"
@@ -47,9 +47,11 @@
                     consumers remember us by our value, <br> the unique taste and design of our products.
                 </p>
 
-
-                <img src="/images/machine-2.webp" alt="Planet Bottling Machines"
-                     class="mt-12 max-w-full w-[64rem] mx-auto">
+                <div class="max-w-5xl mx-auto relative rounded-2xl overflow-hidden">
+                    <img src="/images/machine-2.webp" alt="Planet Bottling Machines"
+                         class="w-full">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent bg-opacity-50"></div>
+                </div>
             </div>
         </div>
         {{----}}
@@ -79,7 +81,7 @@
 
             </div>
         </div>
-       <x-integrates></x-integrates>
+        <x-integrates></x-integrates>
         {{----}}
         <x-brands></x-brands>
     </div>

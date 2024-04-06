@@ -25,7 +25,7 @@
         {{--TODO add team--}}
         <style>
             .slick-current {
-                transform: scale(1.1);
+                transform: {{count($positions) > 5 ? 'scale(1.1)' : '' }} ;
                 transition: transform 0.5s;
             }
         </style>
@@ -128,7 +128,7 @@
             dots: true,
             autoplay: true,
             autoplaySpeed: 4000,
-            centerMode: true,
+            centerMode: {{count($positions) > 5 ? 'true' : 'false'}},
             arrows: true,
             speed: 300,
             slidesToShow: 5,

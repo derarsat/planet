@@ -13,15 +13,16 @@
              class="w-64 absolute -top-[8rem] -right-[8rem] hidden lg:block">
     </p>
     <div class="flex justify-center">
-        <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
+        <a href="/brands" class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</a>
 
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 container py-6 lg:py-0">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 container py-6 lg:py-0 max-w-7xl">
         @foreach($brands as $brand)
-            <div class="aspect-square group relative rounded-3xl overflow-hidden">
+
+            <a href="{{ count($brand->products) > 0 ? '/product/' . $brand->products[0]->id : '#'}}" class="aspect-square group relative rounded-3xl overflow-hidden">
                 <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->greyscaleImage  }}" class="absolute inset-0 h-full w-full opacity-100 aspect-square transition duration-1000 group-hover:opacity-0"/>
                 <img src="{{@App::make('url')->to('/') . '/storage/' . $brand->image  }}" class="absolute inset-0 opacity-0 w-full h-full transition duration-1000 group-hover:opacity-100"/>
-            </div>
+            </a>
         @endforeach
     </div>
 </div>

@@ -31,8 +31,7 @@
             <a href="/media">Media</a>
             <a href="/get-in-touch">Get In Touch</a>
 
-            <button>
-
+            <button id="search-toggler">
                 <svg id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     class="w-8 h-8" viewBox="0 0 51 52">
                     <defs>
@@ -59,6 +58,12 @@
     </div>
 </nav>
 
+<div class="bg-[#7BC3E3] container py-4 hidden" id="search-wrap">
+    <form action="/search">
+        <input name="query" id="search-query" type="text" class="border-0 bg-transparent border-b border-white rounded-none font-light" >
+    </form>
+</div>
+
 <div class="menu hidden ">
     <div class="bg-primary text-white flex  flex-col gap-2 p-8">
         <a href="/who-we-are">Who We Are</a>
@@ -75,5 +80,12 @@
     $(".burger-menu ").on("click",".bar",function(){
         $(".menu").slideToggle(750);
         $(".bar").toggleClass('change');
+    });
+
+
+    $("#search-toggler").on("click",function(){
+        $("#search-wrap").slideToggle(750);
+        $("#search-query").focus();
+
     });
 </script>

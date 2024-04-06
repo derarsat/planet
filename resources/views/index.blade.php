@@ -3,7 +3,13 @@
 @section('content')
     <div class="grid grid-cols-1 gap-12 lg:gap-24">
         {{----}}
-        <div class="relative min-h-[80vh] bg-cover bg-center" style="background-image: url('images/hero.webp')">
+        <div class="relative">
+            <video class="hidden lg:block w-full" autoplay muted loop>
+                <source src="videos/vid_desk.mp4">
+            </video>
+            <video class="block lg:hidden w-full" autoplay muted loop>
+                <source src="videos/vid_mob.mp4">
+            </video>
             <div
                 class="absolute inset-0 flex items-center justify-center flex-col gap-8 bg-gradient-to-t from-white via-transparent to-transparent">
                 <h1 class="text-white font-bold text-4xl lg:text-7xl text-center">
@@ -27,31 +33,37 @@
                 Ibadan expressway with over 100,000 sqm which is currently Planet Bottling Companys factory.
             </p>
             <div class="flex justify-center">
-                <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
+                <a href="/who-we-are" class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</a>
 
             </div>
         </div>
         {{----}}
-        <div class="container relative">
-            <img src="/images/machine.webp" alt="Planet Bottling Machines">
+        <div class="container">
+            <div class="max-w-5xl mx-auto relative rounded-2xl overflow-hidden">
+                <img src="/images/machine.webp" class="w-full" alt="Planet Bottling Machines">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent bg-opacity-50"></div>
+            </div>
+
             <img src="/images/bubble-1.webp" alt="Planet Bottling Locations"
                  class="w-96 absolute -top-[12rem] -left-[12rem] hidden lg:block">
         </div>
 
         {{----}}
-        <div class="bg-dark container grid grid-cols-1 lg:grid-cols-2 gap-24 py-6 lg:py-0 ">
-            <img src="/images/man.webp" alt="Planet Bottling Factory">
-            <div
-                class="text-center lg:text-right text-white flex flex-col items-center lg:items-end justify-center gap-12 ">
-                <h2 class="font-bold text-4xl lg:text-7xl">OUR <br class="hidden lg:block"> VALUES</h2>
-                <p class="font-light">
-                    Our values at Planet Bottling Company encompass a steadfast commitment to innovation, integrity,
-                    diversity and inclusion, quality, open communication, fostering career growth, a relentless passion
-                    for excellence, and an unwavering focus on customer centrality and value centrality in all that we
-                    do.
-                </p>
-                <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
-            </div>
+        <div class="bg-dark ">
+         <div class="container grid grid-cols-1 lg:grid-cols-2 gap-24 py-6 lg:py-12 ">
+             <img src="/images/man.webp" alt="Planet Bottling Factory" class="w-[50rem] max-w-full">
+             <div
+                 class="text-center lg:text-right text-white flex flex-col items-center lg:items-end justify-center gap-12 ">
+                 <h2 class="font-bold text-4xl lg:text-7xl">OUR <br class="hidden lg:block"> VALUES</h2>
+                 <p class="font-light">
+                     Our values at Planet Bottling Company encompass a steadfast commitment to innovation, integrity,
+                     diversity and inclusion, quality, open communication, fostering career growth, a relentless passion
+                     for excellence, and an unwavering focus on customer centrality and value centrality in all that we
+                     do.
+                 </p>
+                 <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
+             </div>
+         </div>
         </div>
         {{----}}
         <div class="text-center grid grid-cols-1 gap-12">
@@ -64,11 +76,11 @@
                      class="w-64 absolute -top-[8rem] -right-[8rem] hidden lg:block">
             </p>
             <div class="flex justify-center">
-                <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
+                <a href="/global-presence" class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</a>
 
             </div>
-            <img src="/images/map2.webp" alt="Planet Bottling Locations"
-                 class="w-[40rem] max-w-full mx-auto">
+            <img src="/images/new-map.png" alt="Planet Bottling Locations"
+                 class="w-[50rem] max-w-[95%] mx-auto">
         </div>
         {{----}}
         {{----}}

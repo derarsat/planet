@@ -18,6 +18,11 @@ Route::get('/', function () {
     $brands = \App\Models\Brand::all();
     return view('index', compact('brands'));
 });
+Route::get('/search', function () {
+    $query = request()->query('query');
+    $products = \App\Models\Product::where('title', 'like', "%$query%")->get();
+    return view('search', compact('products','query'));
+});
 Route::get('/who-we-are', function () {
     $integrates = \App\Models\Integrity::all();
     return view('who-we-are', compact('integrates'));
