@@ -115,11 +115,6 @@
                             <img src="{{@App::make('url')->to('/') . '/storage/' . $flavor->image  }}"
                                  class="grey absolute w-full h-full inset-0 transition duration-1000 opacity-100"
                                  alt="{{$flavor->title}}"/>
-                            <div
-                                class=" content absolute bottom-0 w-full flex  items-center justify-center flex-col py-4 ">
-                                <span class="text-center ">{{$flavor->title}}</span>
-                                <span class="line-clamp-2 text-sm text-center">{{$flavor->description}}</span>
-                            </div>
                         </div>
                     </div>
                 @endforeach
