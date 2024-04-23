@@ -39,7 +39,8 @@ Route::get('/global-presence', function () {
 
 Route::get('/media', function () {
     $events = \App\Models\Event::all();
-    return view('media', compact('events'));
+    $news = \App\Models\News::all();
+    return view('media', compact('events','news'));
 });
 
 Route::get('/get-in-touch', function () {
