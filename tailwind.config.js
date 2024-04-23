@@ -13,7 +13,7 @@ module.exports = {
             }
         },
         fontFamily: {
-            'sans': ['neogroteskpro', 'sans-serif'],
+            'sans': ['Inter', 'sans-serif'],
         },
         container: {
             center: true

@@ -4,18 +4,18 @@
     <div class="grid grid-cols-1 gap-12 lg:gap-24">
         {{----}}
         <div class="relative">
-            <video class="hidden lg:block w-full" autoplay muted loop>
+            <video class="hidden lg:block w-full relative z-10" autoplay muted loop>
                 <source src="videos/vid_desk.mp4">
             </video>
-            <video class="block lg:hidden w-full" autoplay muted loop>
+            <video class="block lg:hidden w-full relative z-10" autoplay muted loop>
                 <source src="videos/vid_mob.mp4">
             </video>
             <div
-                class="absolute inset-0 flex items-center justify-center flex-col gap-8 bg-gradient-to-t from-white via-transparent to-transparent">
+                class="absolute inset-0 z-20 flex items-center justify-center flex-col gap-8 bg-gradient-to-t from-white via-transparent to-transparent">
                 <h1 class="text-white font-bold text-4xl lg:text-7xl text-center">
                     MASTERING BOTTLING <br> FOR GLOBAL DISTRIBUTION
                 </h1>
-                <button class="bg-white text-primary px-6 py-2 rounded-full">Learn More</button>
+                <a href="/global-presence" class="bg-white text-primary px-6 py-2 rounded-full">Learn More</a>
 
             </div>
 
@@ -45,7 +45,7 @@
             </div>
 
             <img src="/images/bubble-1.webp" alt="Planet Bottling Locations"
-                 class="w-96 absolute -top-[12rem] -left-[12rem] hidden lg:block">
+                 class="w-96 absolute -top-[12rem] -left-[12rem] hidden lg:block z-0">
         </div>
 
         {{----}}
@@ -61,7 +61,7 @@
                      for excellence, and an unwavering focus on customer centrality and value centrality in all that we
                      do.
                  </p>
-                 <button class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</button>
+                 <a href="/who-we-are" class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</a>
              </div>
          </div>
         </div>
@@ -79,7 +79,7 @@
                 <a href="/global-presence" class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</a>
 
             </div>
-            <img src="/images/new-map.png" alt="Planet Bottling Locations"
+            <img src="/images/new-map-last.png" alt="Planet Bottling Locations"
                  class="w-[50rem] max-w-[95%] mx-auto">
         </div>
         {{----}}

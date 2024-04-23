@@ -87,7 +87,10 @@ class ProductFlavorCrudController extends CrudController
     {
         CRUD::setValidation(ProductFlavorRequest::class);
         CRUD::field('title');
-        CRUD::field('product');
+        CRUD::field('description');
+        CRUD::field('ingredient_details');
+        CRUD::field('headers');
+        CRUD::field('values');
 
         CRUD::field('image')
             ->type('upload')
@@ -126,6 +129,36 @@ class ProductFlavorCrudController extends CrudController
                 'label' => 'Title',
                 'type' => 'text',
             ],
+
+
+
+            [
+                'name' => 'description',
+                'label' => 'Description',
+                'type' => 'text',
+            ],
+
+
+//            [
+//                'name' => 'ingredient_details',
+//                'label' => 'Ingredient Details',
+//                'type' => 'text',
+//            ],
+//
+//            [
+//                'name' => 'headers',
+//                'label' => 'Headers (Comma Separated)',
+//                'type' => 'text',
+//            ],
+//            [
+//                'name' => 'values',
+//                'label' => 'Values (Comma Separated)',
+//                'type' => 'text',
+//            ],
+
+
+
+
             [
                 'label' => "Image",
                 'name' => "image",

@@ -18,12 +18,7 @@ class ProductFlavor extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'title',
-        'image',
-        'hover_image',
-        'product_id',
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be cast to native types.

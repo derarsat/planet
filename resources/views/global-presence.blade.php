@@ -3,7 +3,7 @@
     <div class="relative h-[85vh] bg-center bg-cover"
          style="background-image: url('images/global-presence-hero.webp')">
         <div class="absolute z-10 flex items-center justify-center inset-0 bg-black bg-opacity-30">
-            <h1 class="text-white font-semibold text-5xl text-center uppercase">
+            <h1 class="text-white font-semibold text-5xl text-center uppercase uppercase">
                 mastering bottling <br> for global
             </h1>
         </div>
@@ -26,7 +26,7 @@
                 40 African countries.
             </h1>
         </div>
-        <img src="/images/new-map.png" alt="Planet Bottling Locations"
+        <img src="/images/new-map-last.png" alt="Planet Bottling Locations"
              class="w-[50rem] max-w-full mx-auto mt-12">
 
     </div>
