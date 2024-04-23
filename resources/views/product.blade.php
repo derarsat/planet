@@ -125,7 +125,7 @@
 
 
     <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center ">
-        <div class="bg-white px-6 py-12 rounded-2xl w-[62rem] max-w-[98vw] relative">
+        <div class="bg-white px-6 py-12 rounded-2xl w-[62rem] max-w-[98vw] relative max-h-[90vh] overflow-y-auto">
             <button id="close" class="absolute top-4 right-4 text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-7 h-7">
@@ -135,7 +135,7 @@
             </button>
 
 
-            <div class="grid grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
                 <div id="image-wrap">
 
                 </div>
