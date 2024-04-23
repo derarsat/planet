@@ -109,7 +109,7 @@
             autoplaySpeed: 4000,
             arrows: true,
             speed: 300,
-            centerMode: true,
+            centerMode: {{count($news) > 5 ? 'true' : 'false'}},
             slidesToShow: 3,
             slidesToScroll: 3,
             responsive: [
@@ -143,7 +143,7 @@
             arrows: true,
             dots:true,
             speed: 300,
-            centerMode: true,
+            centerMode: {{count($events) > 5 ? 'true' : 'false'}},
             slidesToShow: 3,
             slidesToScroll: 3,
             responsive: [
