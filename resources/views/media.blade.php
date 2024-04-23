@@ -96,18 +96,7 @@
     <script>
         $("#close").click(function () {
             $("#modal").css("display", "none")
-        })
-        $("#modal").css("display", "flex")
-        setEvent(
-            {
-                "id": 1,
-                "title": "asdasd",
-                "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                "image": "storage/events/7ec5f244a43a05ef3dd598db4ce4464b.jpg",
-                "created_at": "2024-03-12T18:21:17.000000Z",
-                "updated_at": "2024-04-23T18:04:58.000000Z"
-            }
-        )
+        });
         function setEvent(event) {
             $("#modal").css("display", "flex")
             $("#title").text(event.title)
