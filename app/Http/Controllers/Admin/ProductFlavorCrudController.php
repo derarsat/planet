@@ -87,7 +87,7 @@ class ProductFlavorCrudController extends CrudController
     {
         CRUD::setValidation(ProductFlavorRequest::class);
         CRUD::field('title');
-//        CRUD::field('description');
+        CRUD::field('description');
         CRUD::field('ingredient_details');
         CRUD::field('headers');
         CRUD::field('values');
