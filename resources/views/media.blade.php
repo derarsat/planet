@@ -111,7 +111,7 @@
             speed: 300,
             centerMode: {{count($news) > 5 ? 'true' : 'false'}},
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             responsive: [
 
                 {
@@ -145,7 +145,7 @@
             speed: 300,
             centerMode: {{count($events) > 5 ? 'true' : 'false'}},
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             responsive: [
 
                 {
