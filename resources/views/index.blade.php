@@ -39,7 +39,7 @@
         </div>
         {{----}}
         <div class="container">
-            <div class="max-w-5xl mx-auto relative rounded-2xl overflow-hidden">
+            <div class="max-w-5xl mx-auto relative rounded-3xl overflow-hidden">
                 <img src="/images/machine.webp" class="w-full" alt="Planet Bottling Machines">
                 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent bg-opacity-50"></div>
             </div>

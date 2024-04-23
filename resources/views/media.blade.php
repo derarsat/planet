@@ -36,11 +36,11 @@
         <div class="news">
             @foreach($news as $new)
                 <div class="p-4 slide ">
-                    <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden">
                         <div class="absolute inset-0 bg-primary/40 over">
 
                         </div>
-                        <img class="w-full" src="{{@App::make('url')->to('/') . '/storage/' . $new->image  }}"
+                        <img class="w-full rounded-3xl" src="{{@App::make('url')->to('/') . '/storage/' . $new->image  }}"
                              alt="{{$new->title}}">
                     </div>
                     <p class="mt-6 hidden text-center content">{{$new->content}}</p>
@@ -56,13 +56,13 @@
         <div class="events">
             @foreach($events as $event)
                 <div class="p-4" onclick="setEvent({{$event}})">
-                    <div class="relative aspect-square">
+                    <div class="relative aspect-square rounded-3xl overflow-hidden">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-primary to-transparent flex justify-end p-4 flex-col text-white">
                             <h1 class="font-medium text-lg">{{$event->title}}</h1>
                             <h3 class="line-clamp-2">{{$event->content}}</h3>
                         </div>
-                        <img class="w-full h-full" src="{{@App::make('url')->to('/') . '/' . $event->image  }}"
+                        <img class="w-full h-full rounded-3xl" src="{{@App::make('url')->to('/') . '/' . $event->image  }}"
                              alt="{{$event->title}}">
                         p
                     </div>
@@ -73,7 +73,7 @@
 
 
     <div id="modal" class="fixed  z-10 inset-0 bg-black bg-opacity-50 hidden items-center justify-center ">
-        <div class="bg-white px-6 py-12 rounded-2xl w-[42rem] max-w-[98vw] relative max-h-[90vh] overflow-y-auto">
+        <div class="bg-white px-6 py-12 rounded-3xl w-[42rem] max-w-[98vw] relative max-h-[90vh] overflow-y-auto">
             <button id="close" class="absolute top-4 right-4 text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-7 h-7">
@@ -101,7 +101,7 @@
             $("#modal").css("display", "flex")
             $("#title").text(event.title)
             $("#desc").text(event.content)
-            $("#image-wrap").html("<img src='{{@App::make('url')->to('/') . '/'}}" + event.image + "' class='w-full' alt='" + event.title + "'>")
+            $("#image-wrap").html("<img src='{{@App::make('url')->to('/') . '/'}}" + event.image + "' class='w-full rounded-3xl' alt='" + event.title + "'>")
         }
 
         $('.news').slick({

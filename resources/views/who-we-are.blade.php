@@ -47,7 +47,7 @@
                     consumers remember us by our value, <br> the unique taste and design of our products.
                 </p>
 
-                <div class="max-w-5xl mx-auto relative rounded-2xl overflow-hidden">
+                <div class="max-w-5xl mx-auto relative rounded-3xl overflow-hidden">
                     <img src="/images/machine-2.webp" alt="Planet Bottling Machines"
                          class="w-full">
                     <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent bg-opacity-50"></div>

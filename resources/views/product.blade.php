@@ -86,7 +86,7 @@
                 {{--                bubble image--}}
                 <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
                      class="w-44 absolute -top-20 -left-20">
-                <img class="w-full " src="{{@App::make('url')->to('/') . '/storage/' . $product->historyImage}}"
+                <img class="w-full rounded-3xl" src="{{@App::make('url')->to('/') . '/storage/' . $product->historyImage}}"
                      alt="{{$product->title}}">
             </div>
             <p class="text-center lg:text-left">
@@ -108,7 +108,7 @@
             <div class="responsive max-w-7xl mx-auto px-8 relative lg:px-0 mt-12">
                 @foreach($product->productFlavors as $flavor)
                     <div class="p-4" onclick="setActive({{$flavor}})">
-                        <div class="aspect-square relative">
+                        <div class="aspect-square relative rounded-3xl overflow-hidden">
                             <img src="{{@App::make('url')->to('/') . '/storage/' . $flavor->hover_image  }}"
                                  class="normal w-full h-full absolute inset-0 transition duration-1000 opacity-0"
                                  alt="{{$flavor->title}}"/>
@@ -125,7 +125,7 @@
 
 
     <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center ">
-        <div class="bg-white px-6 py-12 rounded-2xl w-[62rem] max-w-[98vw] relative max-h-[90vh] overflow-y-auto">
+        <div class="bg-white px-6 py-12 rounded-3xl w-[62rem] max-w-[98vw] relative max-h-[90vh] overflow-y-auto">
             <button id="close" class="absolute top-4 right-4 text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                      stroke="currentColor" class="w-7 h-7">
