@@ -91,6 +91,7 @@ class ProductFlavorCrudController extends CrudController
         CRUD::field('ingredient_details');
         CRUD::field('headers');
         CRUD::field('values');
+        CRUD::field('product');
 
         CRUD::field('image')
             ->type('upload')
