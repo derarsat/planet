@@ -25,7 +25,7 @@
             {{--TODO add team--}}
             <style>
                 .slick-current {
-                    transform: {{count($positions) > 5 ? 'scale(1.1)' : '' }} ;
+                    transform: {{count($positions) > 4 ? 'scale(1.1)' : '' }} ;
                     transition: transform 0.5s;
                 }
             </style>
