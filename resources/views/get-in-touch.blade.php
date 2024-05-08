@@ -126,7 +126,7 @@
             dots: true,
             autoplay: true,
             autoplaySpeed: 4000,
-            centerMode: {{count($positions) > 5 ? 'true' : 'false'}},
+            centerMode: {{count($positions) > 4 ? 'true' : 'false'}},
             arrows: true,
             speed: 300,
             slidesToShow: 5,
