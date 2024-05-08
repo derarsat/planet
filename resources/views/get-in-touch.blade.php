@@ -29,7 +29,7 @@
                     transition: transform 0.5s;
                 }
             </style>
-            <div class="responsive max-w-7xl mx-auto px-4 lg:px-0 mt-12">
+            <div class="responsive max-w-5xl mx-auto px-4 lg:px-0 mt-12">
                 @foreach($positions as $position)
                     <div class="p-4" >
                         <div class="desc-wrap" data-desc="{{$position->description}}">
@@ -129,14 +129,14 @@
             centerMode: {{count($positions) > 4 ? 'true' : 'false'}},
             arrows: true,
             speed: 300,
-            slidesToShow: 5,
+            slidesToShow: 4,
             slidesToScroll: 1,
             responsive: [
 
                 {
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 5,
+                        slidesToShow: 4,
                     }
                 },
                 {
