@@ -31,8 +31,8 @@
             </style>
             <div class="responsive max-w-7xl mx-auto px-4 lg:px-0 mt-12">
                 @foreach($positions as $position)
-                    <div class="p-4">
-                        <div class="">
+                    <div class="p-4" >
+                        <div class="desc-wrap" data-desc="{{$position->description}}">
                             <img src="{{@App::make('url')->to('/') . '/storage/' . $position->image  }}"
                                  class="w-full aspect-square "/>
                             <h1 class="text-white mt-3 text-lg text-center">
@@ -42,6 +42,8 @@
                     </div>
                 @endforeach
             </div>
+
+            <div class="active text-white mx-auto px-4 max-w-3xl text-center"></div>
             <div class="flex items-center justify-center">
 
                 <a href="/form/team" class="bg-white text-primary rounded-full px-6 py-3 mx-auto block mt-8">
@@ -56,12 +58,8 @@
                 MARKETING
             </h1>
 
-            <p class="text-center text-dark mt-6 mb-12">
-                Our marketing team comprises experienced, creative, and career-driven <br> individuals who are dedicated
-                to
-                promoting our unique, marketable, and top-quality products through strong, <br> tested, and proven
-                marketing
-                strategies.
+            <p class="text-center text-dark mt-6 mb-12 max-w-3xl px-4 mx-auto">
+                Our marketing team is comprised of experienced, creative, and career-driven individuals who are dedicated to promoting our unique, marketable, and top-quality products through strong, tested, and proven marketing strategies
             </p>
             <div class="flex justify-center">
                 <a href="/form/marketing"
@@ -86,9 +84,7 @@
 
                     <div>
                         <p class="font-light">
-                            Be leaders of innovation in Nigeria the giant of Africa, as we build and maintain
-                            consumer standards for generations of value-driven approach while continuously searching for
-                            the best.
+                            Our sales team is a dynamic and results-oriented group of professionals, driven to excel and deliver exceptional results. With a deep understanding of our unique, marketable, and top-quality products, they employ their expertise to build strong customer relationships and drive sales growth. Leveraging their proven sales strategies, our team consistently achieves targets and ensures our products reach and satisfy customers far and wide
                         </p>
                         <a href="/form/sales" class="bg-primary inline-block text-white px-4 py-2 rounded-full mt-4">Contact
                             Us</a>
@@ -157,5 +153,11 @@
                 }
             ]
         })
+
+        $(".responsive").on("beforeChange", function (){
+            const wrap = $(".slick-active").find($(".desc-wrap"))
+            $('.active').html(wrap.attr('data-desc'))
+        })
+        $(".active").html($($(".slick-active")[0]).find($(".desc-wrap")).attr('data-desc'))
     </script>
 @endsection

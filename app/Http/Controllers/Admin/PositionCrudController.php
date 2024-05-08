@@ -49,6 +49,7 @@ class PositionCrudController extends CrudController
     {
         $this->crud->addColumns($this->getFieldsData(TRUE));
         CRUD::column('title');
+        CRUD::column('description');
 
         $this->crud->addColumn([
             'name' => 'image',
@@ -74,6 +75,7 @@ class PositionCrudController extends CrudController
         CRUD::setValidation(PositionRequest::class);
 
         CRUD::field('title');
+        CRUD::field('description');
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
@@ -104,6 +106,11 @@ class PositionCrudController extends CrudController
             [
                 'name' => 'title',
                 'label' => 'Title',
+                'type' => 'text',
+            ],
+            [
+                'name' => 'description',
+                'label' => 'Description',
                 'type' => 'text',
             ],
             [

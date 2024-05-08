@@ -18,10 +18,7 @@ class Position extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'title',
-        'image',
-    ];
+    protected $guarded=[];
 
     /**
      * The attributes that should be cast to native types.
