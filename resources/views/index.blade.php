@@ -79,7 +79,7 @@
                 <a href="/global-presence" class="bg-primary text-white font-light px-6 py-2 rounded-full">Learn More</a>
 
             </div>
-            <img src="/images/new-map-last.png" alt="Planet Bottling Locations"
+            <img src="/images/new-map-last-2.png" alt="Planet Bottling Locations"
                  class="w-[50rem] max-w-[95%] mx-auto">
         </div>
         {{----}}

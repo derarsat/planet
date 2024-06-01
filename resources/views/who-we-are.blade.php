@@ -21,7 +21,7 @@
                 quality <br> and value in the Nigerian market.
             </p>
             <div class="relative">
-                <img class="w-screen mx-auto mt-24" src="/images/who-we-are.webp"
+                <img class="w-screen mx-auto mt-24" src="/images/who-we-are.png"
                      alt="Planet Bottling Hero">
 
                 <img src="/images/bubble-1.webp"
@@ -36,7 +36,7 @@
                      class="w-[26rem] z-10 absolute right-0 -top-[20rem] hidden lg:block">
                 <h2 class=" font-bold text-4xl lg:text-7xl relative z-10 ">
                     CRAFTING <br>PERFECTION </h2>
-                <p class="text-white uppercase font-medium mb-6 text-xl">
+                <p class="text-white uppercase font-medium my-6 text-xl">
                     Our Mission
                 </p>
                 <p class="text-dark my-6 px-4 mx-auto font-light  z-10 relative">
@@ -72,7 +72,7 @@
                     <img src="/images/m.webp"
                          class="w-[32rem] max-w-full ">
                     <p class="font-light text-dark text-center lg:text-left lg:mt-0">
-                        Be leaders of innovation in Nigeria the giant of africa, <br>
+                        Be leaders of innovation in Nigeria the giant capital of africa, <br>
                         as we build and maintain consumer standards for <br>
                         generations of value-driving approach while <br>
                         continuously searching for the best.

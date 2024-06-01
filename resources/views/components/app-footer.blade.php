@@ -18,7 +18,7 @@
                 <div class="grid grid-cols-1 gap-2 font-light">
                     <a href="#" class="font-bold mb-6 ">Brands</a>
                     <a href="/brands">Planet</a>
-                    <a href="/brands">Original American Cola</a>
+                    <a href="/brands">American Cola</a>
                     <a href="/brands">Reaktor</a>
                     <a href="/brands">Bubble Up</a>
                 </div>
@@ -85,7 +85,7 @@
                     </svg>
                 </a>
             </div>
-            <span>{{ date('Y')  }} | Planet Bottling S.A. All Rights Reserved.</span>
+            <span>{{ date('Y')  }} | Planet Bottling All Rights Reserved.</span>
         </div>
     </div>
 </div>

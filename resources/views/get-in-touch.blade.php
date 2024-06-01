@@ -11,14 +11,14 @@
             <div
                 class="absolute z-10 flex items-center justify-center inset-0 bg-gradient-to-t from-primary from-0% to-40%  to-transparent ">
                 <h1 class="text-white font-semibold text-5xl text-center uppercase">
-                    Get in Touch With <br> Planet Bottling
+                    Get in Touch With Us
                 </h1>
             </div>
         </div>
 
         <div class="bg-primary py-24">
             <h1 class="text-white  text-5xl text-center uppercase">
-                Join <br> The Team
+                Join <br> Our Team
             </h1>
 
             <h2 class="text-white text-center mt-3">Open Positions</h2>
@@ -79,7 +79,7 @@
                 <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
                      class=" hidden lg:block absolute -left-[16rem] -top-[8rem] w-[32rem]">
                 <div class="flex items-center justify-center gap-12 flex-wrap lg:flex-nowrap">
-                    <img src="/images/s2.webp"
+                    <img src="/images/who-we-are.png"
                          class="w-[42rem] max-w-full ">
 
                     <div>
