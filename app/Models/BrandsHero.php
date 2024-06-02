@@ -22,6 +22,7 @@ class BrandsHero extends Model
         $public_destination_path = Str::replaceFirst('public/', 'storage/', $destination_path);
         $this->attributes[$attribute_name] = $public_destination_path . '/' . $filename;
     }
+
     public function getImageAttribute($value)
     {
         return str_replace('storage/brands-heroes', 'brands-heroes', $value);

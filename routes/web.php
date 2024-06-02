@@ -29,8 +29,9 @@ Route::get('/who-we-are', function () {
 });
 Route::get('/brands', function () {
     $brands = \App\Models\Brand::with('products')->get();
+    $heroes = \App\Models\BrandsHero::all();
 
-    return view('brands', compact('brands'));
+    return view('brands', compact('brands','heroes'));
 });
 
 Route::get('/global-presence', function () {

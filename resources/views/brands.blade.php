@@ -2,7 +2,12 @@
 
 @section('content')
 {{--    <img src="/images/brands-banner.webp" alt="Planet Bottling Brands"/>--}}
-    <div class="min-h-[60vh] lg:min-h-[90vh] bg-left bg-cover" style="background-image: url('/images/brands-banner.webp')"> </div>
+<div class="heroes">
+    @foreach($heroes as $hero)
+     <div class="h-[80vh] lg:h-screen" style="background-position: center;background-repeat: no-repeat;background-size: cover; background-image: url({{@App::make('url')->to('/') . '/storage/' . $hero->image  }})">
+     </div>
+    @endforeach
+</div>
     <div class="container flex items-center justify-center gap-4 flex-wrap mt-8">
         <button class="cat px-4 py-2 rounded-full bg-primary text-white">All Products</button>
         @foreach($brands as $brand)
@@ -68,5 +73,18 @@
                 })
             })
         });
+
+
+
+        $('.heroes').slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            arrows: true,
+            dots: true,
+            speed: 300,
+            centerMode: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        })
     </script>
 @endsection

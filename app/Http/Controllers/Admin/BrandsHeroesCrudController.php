@@ -73,10 +73,6 @@ class BrandsHeroesCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(BrandsHeroesRequest::class);
-//
-//        CRUD::field('image');
-
-
         CRUD::field('image')
             ->type('upload')
             ->withFiles([
