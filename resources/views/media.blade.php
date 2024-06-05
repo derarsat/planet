@@ -9,47 +9,47 @@
             </h1>
         </div>
     </div>
-    <div class="py-12 max-w-6xl px-4 lg:px-0 mx-auto">
-        <h1 class="text-primary  text-4xl lg:text-7xl text-center">
-            LATEST NEWS
-        </h1>
-        <p class="mt-8 mb-12 text-center">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+{{--    <div class="py-12 max-w-6xl px-4 lg:px-0 mx-auto">--}}
+{{--        <h1 class="text-primary  text-4xl lg:text-7xl text-center">--}}
+{{--            LATEST NEWS--}}
+{{--        </h1>--}}
+{{--        <p class="mt-8 mb-12 text-center">--}}
+{{--            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et--}}
+{{--            dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed--}}
+{{--            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.--}}
 
-        </p>
+{{--        </p>--}}
 
-        <style>
-            .news .slick-current {
-                transform: scale(1.1);
-                transition: transform 0.5s;
-            }
+{{--        <style>--}}
+{{--            .news .slick-current {--}}
+{{--                transform: scale(1.1);--}}
+{{--                transition: transform 0.5s;--}}
+{{--            }--}}
 
-            .news .slick-current p {
-                display: block;
-            }
+{{--            .news .slick-current p {--}}
+{{--                display: block;--}}
+{{--            }--}}
 
-            .news .slick-current .over {
-                background: rgba(0, 0, 0, 0);
-            }
-        </style>
-        <div class="news">
-            @foreach($news as $new)
-                <div class="p-4 slide ">
-                    <div class="relative rounded-3xl overflow-hidden">
-                        <div class="absolute inset-0 bg-primary/40 over">
+{{--            .news .slick-current .over {--}}
+{{--                background: rgba(0, 0, 0, 0);--}}
+{{--            }--}}
+{{--        </style>--}}
+{{--        <div class="news">--}}
+{{--            @foreach($news as $new)--}}
+{{--                <div class="p-4 slide ">--}}
+{{--                    <div class="relative rounded-3xl overflow-hidden">--}}
+{{--                        <div class="absolute inset-0 bg-primary/40 over">--}}
 
-                        </div>
-                        <img class="w-full rounded-3xl"
-                             src="{{@App::make('url')->to('/') . '/storage/' . $new->image  }}"
-                             alt="{{$new->title}}">
-                    </div>
-                    <p class="mt-6 hidden text-center content">{{$new->content}}</p>
-                </div>
-            @endforeach
-        </div>
-    </div>
+{{--                        </div>--}}
+{{--                        <img class="w-full rounded-3xl"--}}
+{{--                             src="{{@App::make('url')->to('/') . '/storage/' . $new->image  }}"--}}
+{{--                             alt="{{$new->title}}">--}}
+{{--                    </div>--}}
+{{--                    <p class="mt-6 hidden text-center content">{{$new->content}}</p>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <div class="py-12 bg-dark text-white">
         <div class="max-w-4xl px-4 mx-auto text-center ">
             <h1 class="  text-4xl lg:text-7xl mb-8 ">

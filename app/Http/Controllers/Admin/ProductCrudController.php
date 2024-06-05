@@ -66,6 +66,7 @@ class ProductCrudController extends CrudController
         $this->crud->addColumns($this->getFieldsData(TRUE));
         CRUD::column('brand',);
         CRUD::column('title');
+        CRUD::column('flavors_label');
         CRUD::column('story');
         CRUD::column('history');
         $this->crud->addColumn([
@@ -93,6 +94,7 @@ class ProductCrudController extends CrudController
     {
         CRUD::setValidation(ProductRequest::class);
         CRUD::field('title');
+        CRUD::field('flavors_label');
         CRUD::field('history');
         CRUD::field('story');
         CRUD::field('brand_id');
@@ -127,6 +129,11 @@ class ProductCrudController extends CrudController
             [
                 'name' => 'title',
                 'label' => 'Title',
+                'type' => 'text',
+            ],
+            [
+                'name' => 'flavors_label',
+                'label' => 'Flavors Label',
                 'type' => 'text',
             ],
             [

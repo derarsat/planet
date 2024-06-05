@@ -43,8 +43,7 @@
         }
     </style>
     <div class="relative">
-        <div class="min-h-[50vh] lg:min-h-[90vh] bg-center bg-cover"
-             style="background-image: url('{{@App::make('url')->to('/') . '/storage/' . $product->heroImage}}')"></div>
+        <img class="w-full" src="{{@App::make('url')->to('/') . '/storage/' . $product->heroImage}}" alt="">
         <div
             class="absolute z-10 flex items-center justify-center inset-0 bg-gradient-to-t from-primary to-transparent ">
         </div>
@@ -100,8 +99,7 @@
                 THE FLAVORS
             </h1>
             <p class="text-center">
-                {{$product->title}} celebrates diversity through a world of tastes while bringing Nigerians closer
-                together.
+                {{$product->flavors_label}}
             </p>
 
 
