@@ -4,8 +4,7 @@
 {{--    <img src="/images/brands-banner.webp" alt="Planet Bottling Brands"/>--}}
 <div class="heroes">
     @foreach($heroes as $hero)
-     <div class="h-[80vh] lg:h-screen" style="background-position: center;background-repeat: no-repeat;background-size: cover; background-image: url({{@App::make('url')->to('/') . '/storage/' . $hero->image  }})">
-     </div>
+        <img src="{{@App::make('url')->to('/') . '/storage/' . $hero->image  }}" alt="">
     @endforeach
 </div>
     <div class="container flex items-center justify-center gap-4 flex-wrap mt-8">
@@ -48,12 +47,10 @@
             var categories = [];
             $('.cat').each(function() {
                 var category = $(this).text().trim();
-
-                // Check if the category already exists in the array
                 if ($.inArray(category, categories) === -1) {
-                    categories.push(category); // Add unique category to the array
+                    categories.push(category);
                 } else {
-                    $(this).remove(); // Remove duplicate button
+                    $(this).remove();
                 }
             });
             $('.cat').click(function () {
@@ -65,7 +62,7 @@
                 $(this).addClass('bg-primary text-white')
                 $(this).siblings().removeClass('bg-primary text-white')
                 $('.dis-cat').each(function () {
-                    if ($(this).attr('data-category') === category) {
+                    if ($(this).attr('data-category').toLowerCase() === category.toLowerCase()) {
                         $(this).show()
                     } else {
                         $(this).hide()
@@ -73,9 +70,6 @@
                 })
             })
         });
-
-
-
         $('.heroes').slick({
             autoplay: true,
             autoplaySpeed: 4000,
