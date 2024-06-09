@@ -28,7 +28,7 @@
             <a href="/who-we-are">Who We Are</a>
             <a href="/brands">Brands</a>
             <a href="/global-presence">Global Presence</a>
-            <a href="/media">Media</a>
+{{--            <a href="/media">Media</a>--}}
             <a href="/get-in-touch">Get In Touch</a>
 
             <button id="search-toggler">
@@ -69,7 +69,7 @@
         <a href="/who-we-are">Who We Are</a>
         <a href="/brands">Brands</a>
         <a href="/global-presence">Global Presence</a>
-        <a href="/media">Media</a>
+{{--        <a href="/media">Media</a>--}}
         <a href="/get-in-touch">Get In Touch</a>
     </div>
 </div>

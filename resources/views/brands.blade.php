@@ -55,12 +55,13 @@
             });
             $('.cat').click(function () {
                 const category = $(this).text().toLowerCase()
+                $(this).addClass('bg-primary text-white')
+                $(this).siblings().removeClass('bg-primary text-white')
                 if (category === 'all products') {
                     $('.dis-cat').show()
                     return
                 }
-                $(this).addClass('bg-primary text-white')
-                $(this).siblings().removeClass('bg-primary text-white')
+
                 $('.dis-cat').each(function () {
                     if ($(this).attr('data-category').toLowerCase() === category.toLowerCase()) {
                         $(this).show()

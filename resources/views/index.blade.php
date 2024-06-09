@@ -71,7 +71,7 @@
             <p class="max-w-3xl px-4 mx-auto font-light text-text relative">
                 Planet bottling manufactures and markets a range of beverages made entirely in Nigeria under the license
                 from ‘the Monarch Beverages company, Atlanta, GA, USA’. Our brands are already present in over 60
-                countries globally and 40 African countries.
+                countries globally and 30 African countries.
                 <img src="/images/bubble-1.webp" alt="Planet Bottling Locations"
                      class="w-64 absolute -top-[8rem] -right-[8rem] hidden lg:block">
             </p>

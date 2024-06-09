@@ -72,7 +72,7 @@
                     <img src="/images/m.webp"
                          class="w-[32rem] max-w-full ">
                     <p class="font-light text-dark text-center lg:text-left lg:mt-0">
-                        Be leaders of innovation in Nigeria the giant capital of africa, <br>
+                        Be leaders of innovation in Nigeria the giant capital of Africa, <br>
                         as we build and maintain consumer standards for <br>
                         generations of value-driving approach while <br>
                         continuously searching for the best.
