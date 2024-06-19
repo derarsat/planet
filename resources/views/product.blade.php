@@ -21,25 +21,30 @@
             transition: opacity 0.5s;
         }
 
-        .slick-slide:hover img.normal {
-            opacity: 1;
-        }
+        @media (min-width: 900px) {
 
-        .slick-slide:hover .content {
-            opacity: 1;
-        }
+            .slick-slide:hover img.normal {
+                opacity: 1;
+            }
 
-        .slick-slide:hover img.grey {
-            opacity: 0;
-        }
+            .slick-slide:hover .content {
+                opacity: 1;
+            }
 
-        .slick-current img.normal {
-            opacity: 1;
+            .slick-slide:hover img.grey {
+                opacity: 0;
+            }
 
-        }
+            .slick-current img.normal {
+                opacity: 1;
 
-        .slick-current img.grey {
-            opacity: 0;
+            }
+
+            .slick-current img.grey {
+                opacity: 0;
+            }
+
+            Ï
         }
     </style>
     <div class="relative">
@@ -85,7 +90,8 @@
                 {{--                bubble image--}}
                 <img src="/images/bubble-1.webp" alt="Planet Bottling Marketing"
                      class="w-44 absolute -top-20 -left-20">
-                <img class="w-full rounded-3xl" src="{{@App::make('url')->to('/') . '/storage/' . $product->historyImage}}"
+                <img class="w-full rounded-3xl"
+                     src="{{@App::make('url')->to('/') . '/storage/' . $product->historyImage}}"
                      alt="{{$product->title}}">
             </div>
             <p class="text-center lg:text-left">
@@ -163,21 +169,6 @@
         $("#close").click(function () {
             $("#modal").css("display", "none")
         })
-        // setActive(
-        //     {
-        //         "id": 8,
-        //         "product_id": 1,
-        //         "title": "Title",
-        //         "image": "product-flavors/2b7624abea7e28cee634cb55b6632fb5.png",
-        //         "created_at": "2024-03-27T22:25:21.000000Z",
-        //         "updated_at": "2024-04-23T16:52:42.000000Z",
-        //         "hover_image": "product-flavors/92410d50581792f3dfd6b5852311fa6b.png",
-        //         "description": "Long alksdj a;sdj laskdj laskdh aksdj hlaskdh",
-        //         "ingredient_details": "adlk jaslkd jasldk jaslkd jlaksjlkjdlkasjdkjasb askdjhaskjd ha sd askjdhkaj sdha sdaskljdh alksjdh kashd jkahd",
-        //         "headers": "header1,header2,header3",
-        //         "values": "value1,value2,value3,value4,value5,value6,value7,value8,value9,value1,value2,value3,value4,value5,value6,value7,value8,value9"
-        //     }
-        // )
 
         function setActive(flavor) {
             console.log(flavor)
@@ -212,8 +203,6 @@
         $('.responsive').slick({
             autoplay: true,
             autoplaySpeed: 4000,
-            // dots: true,
-            // centerMode: true,
             arrows: true,
             speed: 300,
             slidesToShow: 5,
@@ -230,15 +219,15 @@
                 {
                     breakpoint: 600,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 }
             ]
